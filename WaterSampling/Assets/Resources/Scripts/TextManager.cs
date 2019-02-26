@@ -74,7 +74,7 @@ public class TextManager : MonoBehaviour
             moreChapters.GetComponent<Button>().interactable = false;
             prevChapters.GetComponent<Button>().interactable = true;
         }
-        StartCoroutine(Fade(new Color(1,1,1,1),1f));
+        StartCoroutine(Fade(new Color(1,1,1,1),0.5f));
     }
 
     public void UpdateIndexBounds(int buttonPressed) {
