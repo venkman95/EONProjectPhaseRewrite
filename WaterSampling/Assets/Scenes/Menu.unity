@@ -682,7 +682,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 648502110}
   m_OnClick:
     m_PersistentCalls:
@@ -1522,14 +1522,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chapterTitles:
   - YEET
-  - YEET
-  - YEET
-  - YEET
+  - YEETv2
+  - YEETV3
+  - YEETV4
   chapterSummaries:
-  - 
+  - yaYEET
+  - yaYEET
+  - yaYEET
+  - yaYEET
   chapterSprites:
   - {fileID: 0}
-  chapterSceneNums: 
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  chapterSceneNums: 00000000000000000000000000000000
 --- !u!222 &855986499
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2306,8 +2312,8 @@ RectTransform:
   m_Father: {fileID: 519978466}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.2, y: 0.05}
-  m_AnchorMax: {x: 0.8, y: 0.2}
+  m_AnchorMin: {x: 0.2, y: 0.35}
+  m_AnchorMax: {x: 0.8, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2362,7 +2368,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1318029008}
   m_OnClick:
     m_PersistentCalls:
@@ -2533,7 +2539,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eb72d55c9b7d144f9d1b65434017415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapterTitles: []
+  chapterTitles:
+  - yoot
   chapterSummaries: []
   chapterSprites: []
   chapterSceneNums: 
