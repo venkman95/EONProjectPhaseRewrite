@@ -1570,7 +1570,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  chapterSceneNums: 02000000000000000000000000000000
+  chapterSceneNums: 03000000000000000000000000000000
 --- !u!222 &855986499
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2060,7 +2060,7 @@ MonoBehaviour:
     spaceCount: 1
     wordCount: 2
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -3950,7 +3950,7 @@ MonoBehaviour:
     spaceCount: 1
     wordCount: 2
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0

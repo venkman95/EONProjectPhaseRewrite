@@ -76,7 +76,7 @@ public class StoryManager : MonoBehaviour {
                 Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit)) {
-                    GameObject.Find("TextMeshPro Text").GetComponent<TextMeshProUGUI>().text = hit.transform.gameObject.name;
+                    //GameObject.Find("TextMeshPro Text").GetComponent<TextMeshProUGUI>().text = hit.transform.gameObject.name;
                     foreach(Step elem in steps) {
                         if(hit.transform.gameObject == elem.objectTarget && currentStep == elem.stepOrder && (!audioSource.isPlaying && !audioSource.loop)) {
                             currentStep++;
