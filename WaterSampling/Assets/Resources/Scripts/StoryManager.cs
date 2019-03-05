@@ -27,6 +27,9 @@ public class StoryManager : MonoBehaviour {
     public int currentStep;
 
     [SerializeField]
+    public AudioClip introAudio;
+
+    [SerializeField]
     public GameObject slider;
 
     [SerializeField]
@@ -63,6 +66,10 @@ public class StoryManager : MonoBehaviour {
         currentStep = 0;
     }
 
+    public void Start() {
+        playAudio(introAudio);
+    }
+
     public void Update() {
         for (var i = 0; i < Input.touchCount; ++i) {
             if (Input.GetTouch(i).phase == TouchPhase.Began) {
@@ -71,7 +78,8 @@ public class StoryManager : MonoBehaviour {
                 if (Physics.Raycast(ray, out hit)) {
                     //GameObject.Find("TextMeshPro Text").GetComponent<TextMeshProUGUI>().text = hit.transform.gameObject.name;
                     foreach(Step elem in steps) {
-                        if(hit.transform.gameObject == elem.objectTarget && currentStep == elem.stepOrder && !audioSource.isPlaying) {
+                        if(hit.transform.gameObject == elem.objectTarget && currentStep == elem.stepOrder && (!audioSource.isPlaying && !audioSource.loop)) {
+                            currentStep++;
                             if(elem.animClip != null) {
                                 hit.transform.gameObject.GetComponent<Animator>().Play(elem.animClip.name);
                             }
@@ -81,7 +89,7 @@ public class StoryManager : MonoBehaviour {
                             if (elem.hasSlider) {
                                 if (!slider.activeSelf) {
                                     slider.SetActive(true);
-                                    StartCoroutine(CheckSlider(elem));
+                                    slider.GetComponent<Slider>().onValueChanged.AddListener(delegate { CheckSlider(elem); });
                                 }
                             } else {
                                slider.SetActive(false);
@@ -102,54 +110,52 @@ public class StoryManager : MonoBehaviour {
         audioSource.Play();
     }
 
-    IEnumerator CheckSlider(Step elem) {
-        while (slider.GetComponent<Slider>().value != elem.sliderTarget) {
-            Vector3 p = elem.objectTarget.transform.localPosition;
-            Vector3 r = elem.objectTarget.transform.localRotation.eulerAngles;
-            Vector3 s = elem.objectTarget.transform.localScale;
-            switch (elem.manipulationType) {
-                case ManipulationType.Transform:
-                switch (elem.manipulationAxis) {
-                    case ManipulationAxis.X:
-                    p.x = slider.GetComponent<Slider>().value * elem.manipulationMultiplier;
-                    break;
-                    case ManipulationAxis.Y:
-                    p.y = slider.GetComponent<Slider>().value * elem.manipulationMultiplier;
-                    break;
-                    case ManipulationAxis.Z:
-                    p.z = slider.GetComponent<Slider>().value * elem.manipulationMultiplier;
-                    break;
-                }
+    public void CheckSlider(Step elem) {
+        Vector3 p = elem.objectTarget.transform.localPosition;
+        Quaternion r = elem.objectTarget.transform.localRotation;
+        Vector3 s = elem.objectTarget.transform.localScale;
+        switch (elem.manipulationType) {
+            case ManipulationType.Transform:
+            switch (elem.manipulationAxis) {
+                case ManipulationAxis.X:
+                p.x = slider.GetComponent<Slider>().value * elem.manipulationMultiplier;
                 break;
-                case ManipulationType.Rotate:
-                switch (elem.manipulationAxis) {
-                    case ManipulationAxis.X:
-                    GameObject.Find("TextMeshPro Text").GetComponent<TextMeshProUGUI>().text = ("" + r);
-                    elem.objectTarget.transform.localEulerAngles = new Vector3(slider.GetComponent<Slider>().value * elem.manipulationMultiplier, r.y,r.z);
-                    break;
-                    case ManipulationAxis.Y:
-                    elem.objectTarget.transform.Rotate(new Vector3(r.x,slider.GetComponent<Slider>().value * elem.manipulationMultiplier,r.z));
-                    break;
-                    case ManipulationAxis.Z:
-                    elem.objectTarget.transform.Rotate(new Vector3(r.x,r.y,slider.GetComponent<Slider>().value * elem.manipulationMultiplier));
-                    break;
-                }
+                case ManipulationAxis.Y:
+                p.y = slider.GetComponent<Slider>().value * elem.manipulationMultiplier;
                 break;
-                case ManipulationType.Scale:
-                switch (elem.manipulationAxis) {
-                    case ManipulationAxis.X:
-                    s.x = slider.GetComponent<Slider>().value * elem.manipulationMultiplier;
-                    break;
-                    case ManipulationAxis.Y:
-                    s.y = slider.GetComponent<Slider>().value * elem.manipulationMultiplier;
-                    break;
-                    case ManipulationAxis.Z:
-                    s.z = slider.GetComponent<Slider>().value * elem.manipulationMultiplier;
-                    break;
-                }
+                case ManipulationAxis.Z:
+                p.z = slider.GetComponent<Slider>().value * elem.manipulationMultiplier;
                 break;
             }
-            yield return null;
+            break;
+            case ManipulationType.Rotate:
+            switch (elem.manipulationAxis) {
+                case ManipulationAxis.X:
+                GameObject.Find("TextMeshPro Text").GetComponent<TextMeshProUGUI>().text = ("" + r);
+                GameObject.Find("TextMeshPro Text (1)").GetComponent<TextMeshProUGUI>().text = ("" + (slider.GetComponent<Slider>().value * elem.manipulationMultiplier));
+                elem.objectTarget.transform.localRotation = r * Quaternion.AngleAxis(slider.GetComponent<Slider>().value * elem.manipulationMultiplier,transform.right);
+                break;
+                case ManipulationAxis.Y:
+                elem.objectTarget.transform.Rotate(new Vector3(r.x,slider.GetComponent<Slider>().value * elem.manipulationMultiplier,r.z));
+                break;
+                case ManipulationAxis.Z:
+                elem.objectTarget.transform.Rotate(new Vector3(r.x,r.y,slider.GetComponent<Slider>().value * elem.manipulationMultiplier));
+                break;
+            }
+            break;
+            case ManipulationType.Scale:
+            switch (elem.manipulationAxis) {
+                case ManipulationAxis.X:
+                s.x = slider.GetComponent<Slider>().value * elem.manipulationMultiplier;
+                break;
+                case ManipulationAxis.Y:
+                s.y = slider.GetComponent<Slider>().value * elem.manipulationMultiplier;
+                break;
+                case ManipulationAxis.Z:
+                s.z = slider.GetComponent<Slider>().value * elem.manipulationMultiplier;
+                break;
+            }
+            break;
         }
     }
 }
