@@ -11,11 +11,6 @@ public class PauseMenu : MonoBehaviour {
     [SerializeField]
     GameObject[] toToggle;
 
-    public void Awake() {
-        prevButton = GameObject.Find("ReturnButton").GetComponent<Button>();
-        nextButton = GameObject.Find("NextButton").GetComponent<Button>();
-    }
-
     public void Pause() {
         AudioListener.pause = !AudioListener.pause;
         foreach(GameObject elem in toToggle) {
