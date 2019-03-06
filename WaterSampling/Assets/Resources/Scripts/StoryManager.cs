@@ -75,6 +75,7 @@ public class StoryManager : MonoBehaviour {
     }
 
     public void Update() {
+        GameObject.Find("EventSystem").GetComponent<PauseMenu>().Pause();
         for (var i = 0; i < Input.touchCount; ++i) {
             if (Input.GetTouch(i).phase == TouchPhase.Began) {
                 Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
@@ -100,8 +101,8 @@ public class StoryManager : MonoBehaviour {
                                slider.SetActive(false);
                             }
                             if(currentStep == steps.Length) {
-                                GameObject.Find("PauseButton").GetComponent<PauseMenu>().Pause();
                                 //PlayAudio(outroAudio);
+                                GameObject.Find("EventSystem").GetComponent<PauseMenu>().Pause();
                                 GameObject.Find("PlayButton").SetActive(false);
                             }
                         }
