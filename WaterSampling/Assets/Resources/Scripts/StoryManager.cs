@@ -99,7 +99,7 @@ public class StoryManager : MonoBehaviour {
                             } else {
                                slider.SetActive(false);
                             }
-                            if(currentStep == steps.Length - 1) {
+                            if(currentStep == steps.Length) {
                                 GameObject.Find("PauseButton").GetComponent<PauseMenu>().Pause();
                                 PlayAudio(outroAudio);
                                 GameObject.Find("PlayButton").SetActive(false);
