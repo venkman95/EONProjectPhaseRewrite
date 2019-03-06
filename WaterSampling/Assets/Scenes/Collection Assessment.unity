@@ -3173,14 +3173,80 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentStep: 0
-  introAudio: {fileID: 8300000, guid: 0e60166b3bcbb4640bafafdf3e640437, type: 3}
+  introAudio: {fileID: 8300000, guid: 7a366ea139a48914ab3498082836cb8f, type: 3}
   outroAudio: {fileID: 0}
   slider: {fileID: 0}
   steps:
   - objectTarget: {fileID: 1436144833}
-    audioClip: {fileID: 8300000, guid: 8f286f2ed01564e4ea4a5be5c65d2221, type: 3}
+    audioClip: {fileID: 8300000, guid: de3d8b0ac2208eb4cb2460234c2b883c, type: 3}
     animClip: {fileID: 7400000, guid: 8ea5d29248717d34c90bdb147602c48a, type: 2}
-    stepOrder: 0
+    stepOrder: 1
+    tapOrDrag: 0
+    hasSlider: 0
+    sliderTarget: 0
+    manipulateObject: 0
+    manipulationType: 0
+    manipulationAxis: 0
+    manipulationMultiplier: 0
+  - objectTarget: {fileID: 1436144837}
+    audioClip: {fileID: 8300000, guid: 2d3bb059a06a8624c8754cd187282da4, type: 3}
+    animClip: {fileID: 7400000, guid: 888d0ca21af5d1a4ca1beef747d06c8c, type: 2}
+    stepOrder: 2
+    tapOrDrag: 0
+    hasSlider: 0
+    sliderTarget: 0
+    manipulateObject: 0
+    manipulationType: 0
+    manipulationAxis: 0
+    manipulationMultiplier: 0
+  - objectTarget: {fileID: 1436144837}
+    audioClip: {fileID: 8300000, guid: e5ba91869768d9e4fa3135f71b8aa8c7, type: 3}
+    animClip: {fileID: 7400000, guid: b4970a79af3689345b2e81ad6fc0967a, type: 2}
+    stepOrder: 3
+    tapOrDrag: 0
+    hasSlider: 0
+    sliderTarget: 0
+    manipulateObject: 0
+    manipulationType: 0
+    manipulationAxis: 0
+    manipulationMultiplier: 0
+  - objectTarget: {fileID: 1652766364}
+    audioClip: {fileID: 8300000, guid: 1ea10d457c87b5b4a9a01920ea3c24e6, type: 3}
+    animClip: {fileID: 7400000, guid: e7568082aa0566a4f9b99cea6a8ffc19, type: 2}
+    stepOrder: 4
+    tapOrDrag: 0
+    hasSlider: 0
+    sliderTarget: 0
+    manipulateObject: 0
+    manipulationType: 0
+    manipulationAxis: 0
+    manipulationMultiplier: 0
+  - objectTarget: {fileID: 511655155}
+    audioClip: {fileID: 8300000, guid: 9fb64db0c0b3def4f9b7b92752b1be74, type: 3}
+    animClip: {fileID: 7400000, guid: ee9b9403461b3d7448e37bbd53ee75db, type: 2}
+    stepOrder: 5
+    tapOrDrag: 0
+    hasSlider: 0
+    sliderTarget: 0
+    manipulateObject: 0
+    manipulationType: 0
+    manipulationAxis: 0
+    manipulationMultiplier: 0
+  - objectTarget: {fileID: 511655159}
+    audioClip: {fileID: 8300000, guid: df1a8b75d0966e3439b5e914f88f3015, type: 3}
+    animClip: {fileID: 7400000, guid: 85e17c2e39bbed6408db73f58c3a6d5c, type: 2}
+    stepOrder: 6
+    tapOrDrag: 0
+    hasSlider: 0
+    sliderTarget: 0
+    manipulateObject: 0
+    manipulationType: 0
+    manipulationAxis: 0
+    manipulationMultiplier: 0
+  - objectTarget: {fileID: 511655155}
+    audioClip: {fileID: 8300000, guid: 8f286f2ed01564e4ea4a5be5c65d2221, type: 3}
+    animClip: {fileID: 7400000, guid: 947f852e3f920e04982ad20b022894b9, type: 2}
+    stepOrder: 7
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3191,7 +3257,7 @@ MonoBehaviour:
   - objectTarget: {fileID: 1436144837}
     audioClip: {fileID: 8300000, guid: 8f286f2ed01564e4ea4a5be5c65d2221, type: 3}
     animClip: {fileID: 7400000, guid: 888d0ca21af5d1a4ca1beef747d06c8c, type: 2}
-    stepOrder: 0
+    stepOrder: 8
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3202,7 +3268,7 @@ MonoBehaviour:
   - objectTarget: {fileID: 1436144837}
     audioClip: {fileID: 8300000, guid: 8f286f2ed01564e4ea4a5be5c65d2221, type: 3}
     animClip: {fileID: 7400000, guid: 888d0ca21af5d1a4ca1beef747d06c8c, type: 2}
-    stepOrder: 0
+    stepOrder: 9
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3213,73 +3279,7 @@ MonoBehaviour:
   - objectTarget: {fileID: 1436144837}
     audioClip: {fileID: 8300000, guid: 8f286f2ed01564e4ea4a5be5c65d2221, type: 3}
     animClip: {fileID: 7400000, guid: 888d0ca21af5d1a4ca1beef747d06c8c, type: 2}
-    stepOrder: 0
-    tapOrDrag: 0
-    hasSlider: 0
-    sliderTarget: 0
-    manipulateObject: 0
-    manipulationType: 0
-    manipulationAxis: 0
-    manipulationMultiplier: 0
-  - objectTarget: {fileID: 1436144837}
-    audioClip: {fileID: 8300000, guid: 8f286f2ed01564e4ea4a5be5c65d2221, type: 3}
-    animClip: {fileID: 7400000, guid: 888d0ca21af5d1a4ca1beef747d06c8c, type: 2}
-    stepOrder: 0
-    tapOrDrag: 0
-    hasSlider: 0
-    sliderTarget: 0
-    manipulateObject: 0
-    manipulationType: 0
-    manipulationAxis: 0
-    manipulationMultiplier: 0
-  - objectTarget: {fileID: 1436144837}
-    audioClip: {fileID: 8300000, guid: 8f286f2ed01564e4ea4a5be5c65d2221, type: 3}
-    animClip: {fileID: 7400000, guid: 888d0ca21af5d1a4ca1beef747d06c8c, type: 2}
-    stepOrder: 0
-    tapOrDrag: 0
-    hasSlider: 0
-    sliderTarget: 0
-    manipulateObject: 0
-    manipulationType: 0
-    manipulationAxis: 0
-    manipulationMultiplier: 0
-  - objectTarget: {fileID: 1436144837}
-    audioClip: {fileID: 8300000, guid: 8f286f2ed01564e4ea4a5be5c65d2221, type: 3}
-    animClip: {fileID: 7400000, guid: 888d0ca21af5d1a4ca1beef747d06c8c, type: 2}
-    stepOrder: 0
-    tapOrDrag: 0
-    hasSlider: 0
-    sliderTarget: 0
-    manipulateObject: 0
-    manipulationType: 0
-    manipulationAxis: 0
-    manipulationMultiplier: 0
-  - objectTarget: {fileID: 1436144837}
-    audioClip: {fileID: 8300000, guid: 8f286f2ed01564e4ea4a5be5c65d2221, type: 3}
-    animClip: {fileID: 7400000, guid: 888d0ca21af5d1a4ca1beef747d06c8c, type: 2}
-    stepOrder: 0
-    tapOrDrag: 0
-    hasSlider: 0
-    sliderTarget: 0
-    manipulateObject: 0
-    manipulationType: 0
-    manipulationAxis: 0
-    manipulationMultiplier: 0
-  - objectTarget: {fileID: 1436144837}
-    audioClip: {fileID: 8300000, guid: 8f286f2ed01564e4ea4a5be5c65d2221, type: 3}
-    animClip: {fileID: 7400000, guid: 888d0ca21af5d1a4ca1beef747d06c8c, type: 2}
-    stepOrder: 0
-    tapOrDrag: 0
-    hasSlider: 0
-    sliderTarget: 0
-    manipulateObject: 0
-    manipulationType: 0
-    manipulationAxis: 0
-    manipulationMultiplier: 0
-  - objectTarget: {fileID: 1436144837}
-    audioClip: {fileID: 8300000, guid: 8f286f2ed01564e4ea4a5be5c65d2221, type: 3}
-    animClip: {fileID: 7400000, guid: 888d0ca21af5d1a4ca1beef747d06c8c, type: 2}
-    stepOrder: 0
+    stepOrder: 10
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
