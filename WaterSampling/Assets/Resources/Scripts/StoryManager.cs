@@ -28,6 +28,8 @@ public class StoryManager : MonoBehaviour {
 
     [SerializeField]
     public AudioClip introAudio;
+    [SerializeField]
+    public AudioClip outroAudio;
 
     [SerializeField]
     public GameObject slider;
@@ -67,7 +69,8 @@ public class StoryManager : MonoBehaviour {
     }
 
     public void Start() {
-        playAudio(introAudio);
+        //move this to play intro audio when the marker first comes into view
+        PlayAudio(introAudio);
     }
 
     public void Update() {
@@ -81,10 +84,11 @@ public class StoryManager : MonoBehaviour {
                         if(hit.transform.gameObject == elem.objectTarget && currentStep == elem.stepOrder && (!audioSource.isPlaying && !audioSource.loop)) {
                             currentStep++;
                             if(elem.animClip != null) {
+                                //update for next sprint multiple animations to play in sequence
                                 hit.transform.gameObject.GetComponent<Animator>().Play(elem.animClip.name);
                             }
                             if(elem.audioClip != null) {
-                                playAudio(elem.audioClip);
+                                PlayAudio(elem.audioClip);
                             }
                             if (elem.hasSlider) {
                                 if (!slider.activeSelf) {
@@ -96,6 +100,7 @@ public class StoryManager : MonoBehaviour {
                             }
                             if(currentStep == steps.Length) {
                                 GameObject.Find("PauseButton").GetComponent<PauseMenu>().Pause();
+                                PlayAudio(outroAudio);
                                 GameObject.Find("PlayButton").SetActive(false);
                             }
                         }
@@ -105,7 +110,7 @@ public class StoryManager : MonoBehaviour {
         }
     }
 
-    public void playAudio(AudioClip audio) {
+    public void PlayAudio(AudioClip audio) {
         audioSource.clip = audio;
         audioSource.Play();
     }
