@@ -75,7 +75,6 @@ public class StoryManager : MonoBehaviour {
     }
 
     public void Update() {
-        GameObject.Find("EventSystem").GetComponent<PauseMenu>().Pause();
         for (var i = 0; i < Input.touchCount; ++i) {
             if (Input.GetTouch(i).phase == TouchPhase.Began) {
                 Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
