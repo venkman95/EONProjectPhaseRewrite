@@ -620,10 +620,10 @@ RectTransform:
   m_Father: {fileID: 1453051395}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 70, y: -65}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0.021, y: 0.78}
+  m_AnchorMax: {x: 0.129, y: 0.969}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &496471476
 MonoBehaviour:
@@ -3427,12 +3427,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentStep: 0
-  introAudio: {fileID: 8300000, guid: b1b99dbc3f6fa4d459ba839af5422e4f, type: 3}
+  introAudio: {fileID: 8300000, guid: 98cbbdfcf11bffb449f862713d5f27aa, type: 3}
   outroAudio: {fileID: 8300000, guid: 3f80cc99925a5924a85b497b2ecbac33, type: 3}
   slider: {fileID: 0}
   steps:
   - objectTarget: {fileID: 1652731954}
-    audioClip: {fileID: 8300000, guid: 55e8092b4a25e894eaaa7a55a68f5a1c, type: 3}
+    audioClip: {fileID: 8300000, guid: 7ad8cbf2090df804a9f5aa5586a33a12, type: 3}
     animClip: {fileID: 7400000, guid: f95e2e48a5d4d214b8bfdb286c276deb, type: 2}
     stepOrder: 0
     tapOrDrag: 0
@@ -3443,7 +3443,7 @@ MonoBehaviour:
     manipulationAxis: 0
     manipulationMultiplier: 0
   - objectTarget: {fileID: 123484976}
-    audioClip: {fileID: 8300000, guid: 74e9dd9e04379c049a16ff583a559862, type: 3}
+    audioClip: {fileID: 8300000, guid: bed3f5387d8127a469daeb3507648dc7, type: 3}
     animClip: {fileID: 7400000, guid: 1d5a869260c3f1943a8acddbffa406c9, type: 2}
     stepOrder: 2
     tapOrDrag: 0
@@ -3454,7 +3454,7 @@ MonoBehaviour:
     manipulationAxis: 0
     manipulationMultiplier: 0
   - objectTarget: {fileID: 511655157}
-    audioClip: {fileID: 8300000, guid: cfcaeeacbf9c5fd4ea5f15f7ba29453d, type: 3}
+    audioClip: {fileID: 8300000, guid: b9fc5c14103ba604dafa1304ffcb6a87, type: 3}
     animClip: {fileID: 7400000, guid: 479544875708bb641b220c0baaf78896, type: 2}
     stepOrder: 4
     tapOrDrag: 0
@@ -3465,7 +3465,7 @@ MonoBehaviour:
     manipulationAxis: 0
     manipulationMultiplier: 0
   - objectTarget: {fileID: 511655155}
-    audioClip: {fileID: 8300000, guid: b06dabe62840024458c9af2efe9d242d, type: 3}
+    audioClip: {fileID: 8300000, guid: 6d12d19cf7ecb2045bf0ca4da2e49acd, type: 3}
     animClip: {fileID: 7400000, guid: 6b9ec3e492b8e8d45b5841435946b2ed, type: 2}
     stepOrder: 1
     tapOrDrag: 0
@@ -3476,7 +3476,7 @@ MonoBehaviour:
     manipulationAxis: 0
     manipulationMultiplier: 0
   - objectTarget: {fileID: 511655155}
-    audioClip: {fileID: 8300000, guid: 1d9e38bb1501bfe42a779eebed285634, type: 3}
+    audioClip: {fileID: 8300000, guid: 25ffe3d9e0e096244ad43179b0e6f24b, type: 3}
     animClip: {fileID: 7400000, guid: a11d7451653bd92408be709ec01bb5c1, type: 2}
     stepOrder: 3
     tapOrDrag: 0
@@ -3487,7 +3487,7 @@ MonoBehaviour:
     manipulationAxis: 0
     manipulationMultiplier: 0
   - objectTarget: {fileID: 511655155}
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: d952fc30ea047f84db9fda82a1ecaa0e, type: 3}
     animClip: {fileID: 7400000, guid: 6b9ec3e492b8e8d45b5841435946b2ed, type: 2}
     stepOrder: 5
     tapOrDrag: 0
