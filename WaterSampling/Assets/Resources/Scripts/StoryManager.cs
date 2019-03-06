@@ -101,7 +101,7 @@ public class StoryManager : MonoBehaviour {
                             }
                             if(currentStep == steps.Length) {
                                 GameObject.Find("PauseButton").GetComponent<PauseMenu>().Pause();
-                                PlayAudio(outroAudio);
+                                //PlayAudio(outroAudio);
                                 GameObject.Find("PlayButton").SetActive(false);
                             }
                         }

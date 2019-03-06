@@ -740,6 +740,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!21 &543290644
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'Object_Tracker001Material
+
+    15678'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 8c0d36e2a95d44babc5bb440b0dbd7a1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &749324631
 GameObject:
   m_ObjectHideFlags: 0
@@ -2820,34 +2848,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1652766364}
   m_Mesh: {fileID: 4300000, guid: 13ae2f5e31bd0244cbc56783ee386f1b, type: 3}
---- !u!21 &1849527734
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Object_Tracker001Material
-
-    33386'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 8c0d36e2a95d44babc5bb440b0dbd7a1, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &1860176662
 GameObject:
   m_ObjectHideFlags: 0
@@ -2894,7 +2894,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1849527734}
+  - {fileID: 543290644}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3174,12 +3174,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentStep: 0
-  introAudio: {fileID: 8300000, guid: 0e60166b3bcbb4640bafafdf3e640437, type: 3}
+  introAudio: {fileID: 8300000, guid: eebf193864398ee45bc099e78ed3db0a, type: 3}
   outroAudio: {fileID: 0}
   slider: {fileID: 0}
   steps:
   - objectTarget: {fileID: 1436144837}
-    audioClip: {fileID: 8300000, guid: 8f286f2ed01564e4ea4a5be5c65d2221, type: 3}
+    audioClip: {fileID: 8300000, guid: 985292566645c24469866b6443c78f65, type: 3}
     animClip: {fileID: 7400000, guid: 888d0ca21af5d1a4ca1beef747d06c8c, type: 2}
     stepOrder: 0
     tapOrDrag: 0
@@ -3190,7 +3190,7 @@ MonoBehaviour:
     manipulationAxis: 0
     manipulationMultiplier: 0
   - objectTarget: {fileID: 1436144837}
-    audioClip: {fileID: 8300000, guid: bba90fa9fa7f2584d8a7a9c7e5eb15a9, type: 3}
+    audioClip: {fileID: 8300000, guid: a3f25afd684f5794ebd4fa62b3a037c0, type: 3}
     animClip: {fileID: 7400000, guid: 915b64f54a1be5e40ba4e0cfd878bdf6, type: 2}
     stepOrder: 1
     tapOrDrag: 0
@@ -3201,7 +3201,7 @@ MonoBehaviour:
     manipulationAxis: 0
     manipulationMultiplier: 0
   - objectTarget: {fileID: 1436144833}
-    audioClip: {fileID: 8300000, guid: 0fd41ec42090f224bbe735adc720b742, type: 3}
+    audioClip: {fileID: 8300000, guid: d231fa459898b964c801def1ced5b3f7, type: 3}
     animClip: {fileID: 7400000, guid: 8ea5d29248717d34c90bdb147602c48a, type: 2}
     stepOrder: 2
     tapOrDrag: 0
