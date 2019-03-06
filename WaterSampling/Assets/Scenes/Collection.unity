@@ -1238,8 +1238,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.002708903, y: 0.002708585, z: 0.00529676}
-  m_Center: {x: 1.2288617e-10, y: 7.8329315e-10, z: -0.00009540308}
+  m_Size: {x: 0.0049995244, y: 0.0046423445, z: 0.0057882573}
+  m_Center: {x: 0.000106123305, y: -0.000009744155, z: 0.00015034537}
 --- !u!1 &1436144837
 GameObject:
   m_ObjectHideFlags: 0
@@ -3174,6 +3174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStep: 0
   introAudio: {fileID: 8300000, guid: 0e60166b3bcbb4640bafafdf3e640437, type: 3}
+  outroAudio: {fileID: 0}
   slider: {fileID: 0}
   steps:
   - objectTarget: {fileID: 1436144837}
@@ -3222,7 +3223,7 @@ MonoBehaviour:
     manipulationMultiplier: 0
   - objectTarget: {fileID: 1436144837}
     audioClip: {fileID: 8300000, guid: 3773c767f8291db43981b89d3f3280a0, type: 3}
-    animClip: {fileID: 7400000, guid: b4970a79af3689345b2e81ad6fc0967a, type: 2}
+    animClip: {fileID: 7400000, guid: 888d0ca21af5d1a4ca1beef747d06c8c, type: 2}
     stepOrder: 4
     tapOrDrag: 0
     hasSlider: 0
@@ -3231,9 +3232,9 @@ MonoBehaviour:
     manipulationType: 0
     manipulationAxis: 0
     manipulationMultiplier: 0
-  - objectTarget: {fileID: 511655155}
+  - objectTarget: {fileID: 1436144837}
     audioClip: {fileID: 8300000, guid: 73c2f8a41c96caf47a9f45d3e5e6add5, type: 3}
-    animClip: {fileID: 7400000, guid: ee9b9403461b3d7448e37bbd53ee75db, type: 2}
+    animClip: {fileID: 7400000, guid: b4970a79af3689345b2e81ad6fc0967a, type: 2}
     stepOrder: 5
     tapOrDrag: 0
     hasSlider: 0
@@ -3242,9 +3243,9 @@ MonoBehaviour:
     manipulationType: 0
     manipulationAxis: 0
     manipulationMultiplier: 0
-  - objectTarget: {fileID: 511655159}
+  - objectTarget: {fileID: 511655155}
     audioClip: {fileID: 8300000, guid: d4a996c4a3627ad40b1d16f0843ddd29, type: 3}
-    animClip: {fileID: 7400000, guid: 85e17c2e39bbed6408db73f58c3a6d5c, type: 2}
+    animClip: {fileID: 7400000, guid: ee9b9403461b3d7448e37bbd53ee75db, type: 2}
     stepOrder: 6
     tapOrDrag: 0
     hasSlider: 0
@@ -3255,7 +3256,7 @@ MonoBehaviour:
     manipulationMultiplier: 0
   - objectTarget: {fileID: 511655159}
     audioClip: {fileID: 8300000, guid: 09def823cff696246a3dd8b90c5b9641, type: 3}
-    animClip: {fileID: 7400000, guid: e9f999b69d15e9b4f964f610c1bc033f, type: 2}
+    animClip: {fileID: 7400000, guid: 85e17c2e39bbed6408db73f58c3a6d5c, type: 2}
     stepOrder: 7
     tapOrDrag: 0
     hasSlider: 0
@@ -3264,9 +3265,9 @@ MonoBehaviour:
     manipulationType: 0
     manipulationAxis: 0
     manipulationMultiplier: 0
-  - objectTarget: {fileID: 1436144837}
-    audioClip: {fileID: 8300000, guid: b5676df846c0e114fbef76bb4d0267ae, type: 3}
-    animClip: {fileID: 7400000, guid: 67f4cd8dad396a742bf4e9a3d3640b72, type: 2}
+  - objectTarget: {fileID: 511655159}
+    audioClip: {fileID: 0}
+    animClip: {fileID: 7400000, guid: e9f999b69d15e9b4f964f610c1bc033f, type: 2}
     stepOrder: 8
     tapOrDrag: 0
     hasSlider: 0
@@ -3275,10 +3276,32 @@ MonoBehaviour:
     manipulationType: 0
     manipulationAxis: 0
     manipulationMultiplier: 0
-  - objectTarget: {fileID: 1436144833}
-    audioClip: {fileID: 8300000, guid: 2348b5ab4247a814c8e8154e552d67f4, type: 3}
-    animClip: {fileID: 7400000, guid: bedf2a7de6c2865459327ad4c80b8fdf, type: 2}
+  - objectTarget: {fileID: 511655155}
+    audioClip: {fileID: 8300000, guid: b5676df846c0e114fbef76bb4d0267ae, type: 3}
+    animClip: {fileID: 7400000, guid: 947f852e3f920e04982ad20b022894b9, type: 2}
     stepOrder: 9
+    tapOrDrag: 0
+    hasSlider: 0
+    sliderTarget: 0
+    manipulateObject: 0
+    manipulationType: 0
+    manipulationAxis: 0
+    manipulationMultiplier: 0
+  - objectTarget: {fileID: 1436144837}
+    audioClip: {fileID: 8300000, guid: 2348b5ab4247a814c8e8154e552d67f4, type: 3}
+    animClip: {fileID: 7400000, guid: 67f4cd8dad396a742bf4e9a3d3640b72, type: 2}
+    stepOrder: 10
+    tapOrDrag: 0
+    hasSlider: 0
+    sliderTarget: 0
+    manipulateObject: 0
+    manipulationType: 0
+    manipulationAxis: 0
+    manipulationMultiplier: 0
+  - objectTarget: {fileID: 1436144833}
+    audioClip: {fileID: 8300000, guid: aa7aeb06129fe7949ad66ba1fdce57d9, type: 3}
+    animClip: {fileID: 7400000, guid: bedf2a7de6c2865459327ad4c80b8fdf, type: 2}
+    stepOrder: 11
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
