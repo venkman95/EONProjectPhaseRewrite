@@ -3453,7 +3453,7 @@ MonoBehaviour:
     manipulationAxis: 0
     manipulationMultiplier: 0
   - objectTarget: {fileID: 511655157}
-    audioClip: {fileID: 8300000, guid: b9fc5c14103ba604dafa1304ffcb6a87, type: 3}
+    audioClip: {fileID: 8300000, guid: d050ffe77225ef24e9d3399b54795b45, type: 3}
     animClip: {fileID: 7400000, guid: 479544875708bb641b220c0baaf78896, type: 2}
     stepOrder: 4
     tapOrDrag: 0
