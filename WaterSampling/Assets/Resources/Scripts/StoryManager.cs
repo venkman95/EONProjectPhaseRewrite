@@ -70,6 +70,7 @@ public class StoryManager : MonoBehaviour {
 
     public void Start() {
         //move this to play intro audio when the marker first comes into view
+        AudioListener.pause = false;
         PlayAudio(introAudio);
     }
 
