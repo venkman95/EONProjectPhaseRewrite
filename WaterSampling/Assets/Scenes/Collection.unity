@@ -3427,7 +3427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStep: 0
   introAudio: {fileID: 8300000, guid: b1b99dbc3f6fa4d459ba839af5422e4f, type: 3}
-  outroAudio: {fileID: 8300000, guid: 3f80cc99925a5924a85b497b2ecbac33, type: 3}
+  outroAudio: {fileID: 8300000, guid: 84d4fc8766818e349a38608168d8909c, type: 3}
   slider: {fileID: 0}
   steps:
   - objectTarget: {fileID: 1652731954}
@@ -3486,7 +3486,7 @@ MonoBehaviour:
     manipulationAxis: 0
     manipulationMultiplier: 0
   - objectTarget: {fileID: 511655155}
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 70e92e5733b88ee4fa2d9ff3d7627abf, type: 3}
     animClip: {fileID: 7400000, guid: 6b9ec3e492b8e8d45b5841435946b2ed, type: 2}
     stepOrder: 5
     tapOrDrag: 0
