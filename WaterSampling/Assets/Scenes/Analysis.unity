@@ -3428,10 +3428,10 @@ MonoBehaviour:
   currentStep: 0
   slider: {fileID: 0}
   steps:
-  - objectTarget: {fileID: 1652731955}
+  - objectTarget: {fileID: 1652731954}
     audioClip: {fileID: 0}
     animClip: {fileID: 7400000, guid: f95e2e48a5d4d214b8bfdb286c276deb, type: 2}
-    stepOrder: 1
+    stepOrder: 0
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3442,7 +3442,7 @@ MonoBehaviour:
   - objectTarget: {fileID: 123484976}
     audioClip: {fileID: 0}
     animClip: {fileID: 7400000, guid: b93e85591022c2c48a556b4cbbe12357, type: 2}
-    stepOrder: 0
+    stepOrder: 1
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
