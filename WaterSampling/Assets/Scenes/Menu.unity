@@ -1826,8 +1826,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: cf18ab494a3dade44b6ee0681434f4a6, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4168,13 +4168,19 @@ MonoBehaviour:
   chapterTitles:
   - Collection
   - Analysis
+  - Collection Assessment
+  - Analysis Assessment
   chapterSummaries:
   - Tutorial of Collection
   - Tutorial of Analysis
+  - Assessment of Collection
+  - Assessment of Analysis
   chapterSprites:
   - {fileID: 21300000, guid: 5c2de3328c945da49ab420ff012b5f93, type: 3}
   - {fileID: 21300000, guid: cfaf03fcd8f9b8c438e98548594846bf, type: 3}
-  chapterSceneNums: 0400000003000000
+  - {fileID: 21300000, guid: 5c2de3328c945da49ab420ff012b5f93, type: 3}
+  - {fileID: 21300000, guid: 5c2de3328c945da49ab420ff012b5f93, type: 3}
+  chapterSceneNums: 04000000030000000500000006000000
 --- !u!222 &1991014895
 CanvasRenderer:
   m_ObjectHideFlags: 0
