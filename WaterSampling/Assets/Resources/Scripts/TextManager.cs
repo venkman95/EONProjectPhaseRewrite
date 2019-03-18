@@ -135,6 +135,8 @@ public class TextManager : MonoBehaviour
 
     //called when you select a chapter
     public void LoadScene(int buttonPressed) {
+        lowerIndex = eventManager.GetComponent<TextManager>().lowerIndex;
+        upperIndex = eventManager.GetComponent<TextManager>().upperIndex;
         //button pressed is equal to 0,1,2 for Chapter1,Chapter2,Chapter3 buttons respectively
         switch (buttonPressed) {
             //if statements to check if user is on first or second page of chapters
