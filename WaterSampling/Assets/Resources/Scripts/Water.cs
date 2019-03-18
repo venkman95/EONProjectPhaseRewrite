@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Water : MonoBehaviour
 {
-    StoryManager storyManager;
+    public GameObject storyManager;
 
-    GameObject water;
+    public GameObject water;
 
     private void Awake() {
-        storyManager = GameObject.Find("EventSystem").GetComponent<StoryManager>();
+        storyManager = this.gameObject;
         water = GameObject.Find("waterv1");
     }
 
@@ -17,22 +17,21 @@ public class Water : MonoBehaviour
         water.SetActive(false);
     }
 
-    void Update()
-    {
-        switch (storyManager.currentStep) {
-            case 0:
+    void Update() {
+        switch (storyManager.GetComponent<StoryManager>().currentStep) {
+            case 1:
                 water.SetActive(true);
                 break;
-            case 1:
+            case 2:
                 water.SetActive(false);
                 break;
-            case 4:
+            case 5:
                 water.SetActive(true);
                 break;
-            case 5:
+            case 6:
                 StartCoroutine(Lerp(100,1));
                 break;
-            case 10:
+            case 11:
                 water.SetActive(false);
                 break;
         }

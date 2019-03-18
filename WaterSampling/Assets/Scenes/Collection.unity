@@ -313,7 +313,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: 852d9409b85782b438a8b0413fdfd088, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[0]
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: 852d9409b85782b438a8b0413fdfd088, type: 3}
       propertyPath: m_AABB.m_Extent.x
@@ -343,24 +343,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 366937336}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &366937338 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: 852d9409b85782b438a8b0413fdfd088,
-    type: 3}
-  m_PrefabInstance: {fileID: 366937336}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &366937339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 366937338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31826813d3ff61e4ea98a3b58c005edd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &496471474
 GameObject:
   m_ObjectHideFlags: 0
@@ -3201,6 +3183,7 @@ GameObject:
   - component: {fileID: 2119829934}
   - component: {fileID: 2119829935}
   - component: {fileID: 2119829936}
+  - component: {fileID: 2119829937}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -3528,3 +3511,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2119829937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119829929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31826813d3ff61e4ea98a3b58c005edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storyManager: {fileID: 0}
+  water: {fileID: 0}
