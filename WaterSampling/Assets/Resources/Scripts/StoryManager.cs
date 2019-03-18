@@ -109,7 +109,7 @@ public class StoryManager : MonoBehaviour {
                     }
                 }
             }
-        }
+       }
     }
 
     public void PlayAudio(AudioClip audio) {
