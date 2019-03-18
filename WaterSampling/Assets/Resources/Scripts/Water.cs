@@ -21,6 +21,8 @@ public class Water : MonoBehaviour
         switch (storyManager.GetComponent<StoryManager>().currentStep) {
             case 1:
                 water.SetActive(true);
+                water.transform.localPosition = new Vector3(-0.0046f,-0.00132f,0);
+                water.transform.localScale = new Vector3(1,1,3.5f);
                 break;
             case 2:
                 water.SetActive(false);
@@ -29,6 +31,8 @@ public class Water : MonoBehaviour
                 water.SetActive(true);
                 break;
             case 6:
+                water.transform.localPosition = new Vector3(-0.0046f,-0.00549f,0);
+                water.transform.localScale = new Vector3(1,1,1.9f);
                 StartCoroutine(Lerp(100,1));
                 break;
             case 11:
