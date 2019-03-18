@@ -44,7 +44,7 @@ public class Water : MonoBehaviour
     IEnumerator Lerp(float target,float time) {
         float elapsedTime = 0;
         while (elapsedTime < time) {
-            water.GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(0,water.GetComponent<SkinnedMeshRenderer>().GetBlendShapeWeight(0) + target/time);
+            water.GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(0,(water.GetComponent<SkinnedMeshRenderer>().GetBlendShapeWeight(0) + target/Time.deltaTime));
             elapsedTime += Time.deltaTime;
             yield return null;
         }
