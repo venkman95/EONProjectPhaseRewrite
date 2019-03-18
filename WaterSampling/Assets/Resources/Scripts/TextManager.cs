@@ -77,9 +77,7 @@ public class TextManager : MonoBehaviour
         eventManager.GetComponent<TextManager>().chapterSummaries = chapterSummaries;
         eventManager.GetComponent<TextManager>().chapterSprites = chapterSprites;
         eventManager.GetComponent<TextManager>().chapterSceneNums = chapterSceneNums;
-        //updates the index variables of the pressed button from the values that the eventManager has
-        lowerIndex = eventManager.GetComponent<TextManager>().lowerIndex;
-        upperIndex = eventManager.GetComponent<TextManager>().upperIndex;
+        
 
         //determines if the back/next chapters buttons are interactable
         if (lowerIndex == 0 && chapterTitles.Length > 3) {
@@ -123,6 +121,7 @@ public class TextManager : MonoBehaviour
             for(int i = 3; i != 0; i--) {
                 if(upperIndex + i > chapterTitles.Length) {
                     upperIndex += i;
+                    Debug.Log(upperIndex + " ch3");
                     break;
                 }
             }
@@ -135,10 +134,14 @@ public class TextManager : MonoBehaviour
 
     //called when you select a chapter
     public void LoadScene(int buttonPressed) {
+        //updates the index variables of the pressed button from the values that the eventManager has
+        lowerIndex = eventManager.GetComponent<TextManager>().lowerIndex;
+        upperIndex = eventManager.GetComponent<TextManager>().upperIndex;
         //button pressed is equal to 0,1,2 for Chapter1,Chapter2,Chapter3 buttons respectively
         switch (buttonPressed) {
             //if statements to check if user is on first or second page of chapters
             case 0:
+                Debug.Log(upperIndex+" load scene");
             if(upperIndex != 2) {
                 //load scene from given index in array
                 SceneManager.LoadScene(eventManager.GetComponent<TextManager>().chapterSceneNums[3]);
