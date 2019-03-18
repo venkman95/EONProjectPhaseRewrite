@@ -21,9 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Collection.unity
     guid: 6edc27dff5c011f47b27afdeaa81c472
   - enabled: 1
-    path: Assets/Scenes/Collection Assessment.unity
+    path: Assets/Scenes/Collection Review.unity
     guid: 751f84fcf18e6fd48882be7a944c4188
   - enabled: 1
-    path: Assets/Scenes/Analysis Assessment.unity
+    path: Assets/Scenes/Analysis Review.unity
     guid: d71a97e54a8f0d140b53c0404b432408
   m_configObjects: {}
