@@ -21,6 +21,19 @@ public class Water : MonoBehaviour
     {
         switch (storyManager.currentStep) {
             case 0:
+                water.SetActive(true);
+                break;
+            case 1:
+                water.SetActive(false);
+                break;
+            case 4:
+                water.SetActive(true);
+                break;
+            case 5:
+                StartCoroutine(Lerp(100,1));
+                break;
+            case 10:
+                water.SetActive(false);
                 break;
         }
     }
