@@ -929,7 +929,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.1, z: 0.1}
+  m_Size: {x: 0.1, y: 0.13, z: 0.1}
   m_Center: {x: 0, y: 0.05, z: 0}
 --- !u!1 &511655159
 GameObject:
@@ -3667,7 +3667,7 @@ MonoBehaviour:
     manipulationMultiplier: 0
   - objectTarget: {fileID: 511655157}
     audioClip: {fileID: 8300000, guid: df02e5e622d0a694daeecfbe6781895e, type: 3}
-    animClip: {fileID: 7400000, guid: 6b9ec3e492b8e8d45b5841435946b2ed, type: 2}
+    animClip: {fileID: 7400000, guid: 7a0445cbeb327ad4f9cb3084ff69a55f, type: 2}
     stepOrder: 5
     tapOrDrag: 0
     hasSlider: 0
