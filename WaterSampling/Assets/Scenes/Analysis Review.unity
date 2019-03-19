@@ -3544,7 +3544,7 @@ MonoBehaviour:
     manipulationType: 0
     manipulationAxis: 0
     manipulationMultiplier: 0
-  - objectTarget: {fileID: 511655155}
+  - objectTarget: {fileID: 511655157}
     audioClip: {fileID: 8300000, guid: 57d9426a9011a4c4aac4949b65c50954, type: 3}
     animClip: {fileID: 7400000, guid: 6b9ec3e492b8e8d45b5841435946b2ed, type: 2}
     stepOrder: 1
@@ -3566,7 +3566,7 @@ MonoBehaviour:
     manipulationType: 0
     manipulationAxis: 0
     manipulationMultiplier: 0
-  - objectTarget: {fileID: 511655155}
+  - objectTarget: {fileID: 511655157}
     audioClip: {fileID: 8300000, guid: aec5b4ffe1688cc49ba79160f7f11ba1, type: 3}
     animClip: {fileID: 7400000, guid: a11d7451653bd92408be709ec01bb5c1, type: 2}
     stepOrder: 3
@@ -3588,7 +3588,7 @@ MonoBehaviour:
     manipulationType: 0
     manipulationAxis: 0
     manipulationMultiplier: 0
-  - objectTarget: {fileID: 511655155}
+  - objectTarget: {fileID: 511655157}
     audioClip: {fileID: 8300000, guid: df02e5e622d0a694daeecfbe6781895e, type: 3}
     animClip: {fileID: 7400000, guid: 6b9ec3e492b8e8d45b5841435946b2ed, type: 2}
     stepOrder: 5
