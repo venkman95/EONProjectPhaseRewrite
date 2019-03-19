@@ -5,12 +5,13 @@ using UnityEngine;
 public class Water : MonoBehaviour
 {
     public GameObject storyManager;
-
     public GameObject water;
+    public GameObject parent;
 
     private void Awake() {
         storyManager = this.gameObject;
         water = GameObject.Find("waterv1");
+        parent = GameObject.Find("Faucet");
     }
 
     private void Start() {
@@ -21,8 +22,8 @@ public class Water : MonoBehaviour
         switch (storyManager.GetComponent<StoryManager>().currentStep) {
             case 1:
                 water.SetActive(true);
-                water.transform.localPosition = new Vector3(-0.0046f,-0.00132f,0);
-                water.transform.localScale = new Vector3(1,1,3.5f);
+                water.transform.position = new Vector3(-0.251f,0.3307735f,0.129f);
+                water.transform.localScale = new Vector3(16.40755f,16.40756f,57.42658f);
                 break;
             case 2:
                 water.SetActive(false);
@@ -31,9 +32,13 @@ public class Water : MonoBehaviour
                 water.SetActive(true);
                 break;
             case 6:
-                water.transform.localPosition = new Vector3(-0.0046f,-0.00549f,0);
-                water.transform.localScale = new Vector3(1,1,1.9f);
-                StartCoroutine(Lerp(100,1));
+                StartCoroutine(Lerp(0,100,1));
+                break;
+            case 8:
+                StartCoroutine(AdjustWater(0.35f, 8));
+                break;
+            case 10:
+                StartCoroutine(AdjustWater(0.15f, 10));
                 break;
             case 11:
                 water.SetActive(false);
@@ -41,11 +46,25 @@ public class Water : MonoBehaviour
         }
     }
 
-    IEnumerator Lerp(float target,float time) {
+    IEnumerator Lerp(float start,float target,float time) {
         float elapsedTime = 0;
         while (elapsedTime < time) {
-            water.GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(0,(water.GetComponent<SkinnedMeshRenderer>().GetBlendShapeWeight(0) + target/Time.deltaTime));
+            water.GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(0,Mathf.Lerp(start,target,elapsedTime));
+            //water.GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(0,(water.GetComponent<SkinnedMeshRenderer>().GetBlendShapeWeight(0) + target * Time.deltaTime));
             elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+    }
+    IEnumerator AdjustWater(float time,int step) {
+        float elapsedTime = 0;
+        while (elapsedTime > time && elapsedTime < 1) {
+            if (step == 8) {
+                water.transform.position = new Vector3(-0.251f,0.462f,0.129f);
+                water.transform.localScale = new Vector3(16.40755f,16.40755f,31f);
+            } else if (step == 10) {
+                water.transform.position = new Vector3(-0.251f,0.3307735f,0.129f);
+                water.transform.localScale = new Vector3(16.40755f,16.40756f,57.42658f);
+            }
             yield return null;
         }
     }
