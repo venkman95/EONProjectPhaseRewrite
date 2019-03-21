@@ -23,6 +23,8 @@ public class StoryManager : MonoBehaviour {
         Z
     }
 
+    GameObject questionPanel;
+
     AudioSource audioSource;
 
     public int currentStep;
@@ -64,14 +66,22 @@ public class StoryManager : MonoBehaviour {
         public ManipulationAxis manipulationAxis;
         [SerializeField]
         public float manipulationMultiplier;
+        [SerializeField]
+        public bool hasQuestion;
+        [SerializeField]
+        public String question;
+        [SerializeField]
+        public String[] answers;
     }
 
     public void Awake() {
+        questionPanel = GameObject.Find("QuestionPanel");
         audioSource = GetComponent<AudioSource>();
         currentStep = 0;
     }
 
     public void Start() {
+        questionPanel.SetActive(false);
         //move this to play intro audio when the marker first comes into view
         AudioListener.pause = false;
         PlayAudio(introAudio);
@@ -102,6 +112,9 @@ public class StoryManager : MonoBehaviour {
                             } else {
                                 slider.SetActive(false);
                             }
+                            if (elem.hasQuestion) {
+                                Question(elem.question);
+                            }
                             if (currentStep == steps.Length) {
                                 //PlayAudio(outroAudio);
                                 GameObject.Find("EventSystem").GetComponent<PauseMenu>().Pause();
@@ -114,6 +127,10 @@ public class StoryManager : MonoBehaviour {
                 }
             }
         }
+    }
+
+    public void Question(String question) {
+         
     }
 
     public void PlayAudio(AudioClip audio) {
