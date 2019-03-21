@@ -1,30 +1,22 @@
 fileFormatVersion: 2
-guid: 27b2cd4c8ef947a47b0f7bd77bc409ab
+guid: 9b6ae4b79af7d674ab2fefff95eb93d4
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Jar_Low
-    100002: //RootNode
-    100004: Lid_Low
-    100006: Water_Cylinder
-    400000: Jar_Low
-    400002: //RootNode
-    400004: Lid_Low
-    400006: Water_Cylinder
-    2100000: jar
+    100000: //RootNode
+    100002: Bottle
+    100004: Lid
+    400000: //RootNode
+    400002: Bottle
+    400004: Lid
+    2100000: Jar
     2100002: Lid
-    2100004: No Name
-    2300000: Jar_Low
-    2300002: Lid_Low
-    2300004: Water_Cylinder
-    3300000: Jar_Low
-    3300002: Lid_Low
-    3300004: Water_Cylinder
-    4300000: Jar_Low
-    4300002: Lid_Low
-    4300004: Water_Cylinder
-    7400000: Take 001
-    9500000: //RootNode
+    2300000: Bottle
+    2300002: Lid
+    3300000: Bottle
+    3300002: Lid
+    4300000: Bottle
+    4300002: Lid
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -77,8 +69,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -105,7 +97,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
