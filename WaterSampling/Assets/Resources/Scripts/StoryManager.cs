@@ -71,7 +71,10 @@ public class StoryManager : MonoBehaviour {
         [SerializeField]
         public String question;
         [SerializeField]
-        public String[] answers;
+        //Do not set this array to be larger than 4
+        public String[] choices;
+        [SerializeField]
+        public int correctChoice;
     }
 
     public void Awake() {
@@ -98,14 +101,17 @@ public class StoryManager : MonoBehaviour {
                         if (hit.transform.gameObject == elem.objectTarget && currentStep == elem.stepOrder && (!audioSource.isPlaying && !audioSource.loop)) {
                             currentStep++;
                             if (elem.animClip != null) {
+                                //play the animation for the step
                                 //maybe update for next sprint multiple animations to play in sequence
                                 hit.transform.gameObject.GetComponent<Animator>().Play(elem.animClip.name);
                             }
                             if (elem.audioClip != null) {
+                                //play audio for the step
                                 PlayAudio(elem.audioClip);
                             }
                             if (elem.hasSlider) {
                                 if (!slider.activeSelf) {
+                                    //activate slider and add an EventListener that calls CheckSlider(Step) everytime the slider value changes
                                     slider.SetActive(true);
                                     slider.GetComponent<Slider>().onValueChanged.AddListener(delegate { CheckSlider(elem); });
                                 }
@@ -113,7 +119,11 @@ public class StoryManager : MonoBehaviour {
                                 slider.SetActive(false);
                             }
                             if (elem.hasQuestion) {
-                                Question(elem.question);
+                                //send necessary data to the QuestionManager and call Question()
+                                questionPanel.GetComponent<QuestionManager>().question = elem.question;
+                                questionPanel.GetComponent<QuestionManager>().choices = elem.choices;
+                                questionPanel.GetComponent<QuestionManager>().answer = elem.correctChoice;
+                                questionPanel.GetComponent<QuestionManager>().Question();
                             }
                             if (currentStep == steps.Length) {
                                 //PlayAudio(outroAudio);
@@ -129,15 +139,12 @@ public class StoryManager : MonoBehaviour {
         }
     }
 
-    public void Question(String question) {
-         
-    }
-
     public void PlayAudio(AudioClip audio) {
         audioSource.clip = audio;
         audioSource.Play();
     }
 
+    //adjusts the position/rotation/scale of the object along one axis depending on the value of the slider.
     public void CheckSlider(Step elem) {
         Vector3 p = elem.objectTarget.transform.localPosition;
         Quaternion r = elem.objectTarget.transform.localRotation;

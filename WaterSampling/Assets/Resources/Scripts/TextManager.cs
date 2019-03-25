@@ -179,7 +179,7 @@ public class TextManager : MonoBehaviour {
             chapter1Summary.color = new Color(color.r,color.g,color.b,Mathf.Lerp(color.a,0,(elapsedTime / time)));
             chapter2Summary.color = new Color(color.r,color.g,color.b,Mathf.Lerp(color.a,0,(elapsedTime / time)));
             chapter3Summary.color = new Color(color.r,color.g,color.b,Mathf.Lerp(color.a,0,(elapsedTime / time)));
-            //0.31764f is hardcoded to keep track of sprit color
+            //0.31764f is hardcoded to keep track of sprite color
             chapter1Sprite.color = new Color(0.3176471f,0.3176471f,0.3176471f,Mathf.Lerp(color.a,0,(elapsedTime / time)));
             chapter2Sprite.color = new Color(0.3176471f,0.3176471f,0.3176471f,Mathf.Lerp(color.a,0,(elapsedTime / time)));
             chapter3Sprite.color = new Color(0.3176471f,0.3176471f,0.3176471f,Mathf.Lerp(color.a,0,(elapsedTime / time)));
