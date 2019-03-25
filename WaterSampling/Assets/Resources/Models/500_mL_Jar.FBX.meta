@@ -1,27 +1,22 @@
 fileFormatVersion: 2
-guid: 89e7118c99dcb8046b84cbde88ef2028
+guid: 9b6ae4b79af7d674ab2fefff95eb93d4
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     100002: Bottle
     100004: Lid
-    100006: Water_Shape
     400000: //RootNode
     400002: Bottle
     400004: Lid
-    400006: Water_Shape
     2100000: Jar
     2100002: Lid
     2300000: Bottle
     2300002: Lid
-    2300004: Water_Shape
     3300000: Bottle
     3300002: Lid
-    3300004: Water_Shape
     4300000: Bottle
     4300002: Lid
-    4300004: Water_Shape
   externalObjects: {}
   materials:
     importMaterials: 1
