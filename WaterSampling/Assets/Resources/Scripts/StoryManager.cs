@@ -30,7 +30,7 @@ public class StoryManager : MonoBehaviour {
 
     public int currentStep;
     private bool introPlayed = false;
-
+    private bool finished = false;
     [SerializeField]
     public AudioClip introAudio;
     [SerializeField]
@@ -97,6 +97,13 @@ public class StoryManager : MonoBehaviour {
     }
 
     public void Update() {
+        if (currentStep == steps.Length && !audioSource.isPlaying && finished==false)
+        {
+            finished = true;
+            //PlayAudio(outroAudio);
+            GameObject.Find("EventSystem").GetComponent<PauseMenu>().Pause();
+            GameObject.Find("PlayButton").SetActive(false);
+        }
         if (!audioSource.isPlaying && introPlayed==true)
         {
             steps[currentStep].highlightTarget.gameObject.GetComponent<Animator>().Play(steps[currentStep].highlightThis.name);
@@ -106,12 +113,9 @@ public class StoryManager : MonoBehaviour {
                 Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit)) {
-                    
                     //GameObject.Find("TextMeshPro Text").GetComponent<TextMeshProUGUI>().text = hit.transform.gameObject.name;
                     foreach (Step elem in steps) {
                         if(hit.transform.gameObject == elem.objectTarget && currentStep == elem.stepOrder && (!audioSource.isPlaying && !audioSource.loop)) {
-
-
                             currentStep++;
                             if (elem.animClip != null) {
                                 //play the animation for the step
@@ -137,11 +141,6 @@ public class StoryManager : MonoBehaviour {
                                 qAPanel.GetComponent<QuestionManager>().choices = elem.choices;
                                 qAPanel.GetComponent<QuestionManager>().answer = elem.correctChoice;
                                 Invoke("Question", elem.audioClip.length);
-                            }
-                            if (currentStep == steps.Length) {
-                                //PlayAudio(outroAudio);
-                                GameObject.Find("EventSystem").GetComponent<PauseMenu>().Pause();
-                                GameObject.Find("PlayButton").SetActive(false);
                             }
                         } else if (hit.transform.gameObject != elem.objectTarget && currentStep == elem.stepOrder && !audioSource.isPlaying) {
                             PlayAudio(elem.missTap);
