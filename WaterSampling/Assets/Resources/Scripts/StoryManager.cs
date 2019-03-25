@@ -30,7 +30,7 @@ public class StoryManager : MonoBehaviour {
 
     public int currentStep;
     private bool introPlayed = false;
-
+    private bool finished = false;
     [SerializeField]
     public AudioClip introAudio;
     [SerializeField]
@@ -95,7 +95,14 @@ public class StoryManager : MonoBehaviour {
     }
 
     public void Update() {
-        if (!audioSource.isPlaying && introPlayed == true) {
+        if (currentStep == steps.Length && !audioSource.isPlaying && finished==false)
+        {
+            finished = true;
+            //PlayAudio(outroAudio);
+            GameObject.Find("EventSystem").GetComponent<PauseMenu>().Pause();
+            GameObject.Find("PlayButton").SetActive(false);
+        }
+        if (!audioSource.isPlaying && introPlayed==true) {
             steps[currentStep].highlightTarget.gameObject.GetComponent<Animator>().Play(steps[currentStep].highlightThis.name);
         }
         for (var i = 0; i < Input.touchCount; ++i) {
@@ -134,11 +141,6 @@ public class StoryManager : MonoBehaviour {
                                     Invoke("Question",elem.audioClip.length);
                                 }
                                 Question();
-                            }
-                            if (currentStep == steps.Length) {
-                                //PlayAudio(outroAudio);
-                                GameObject.Find("EventSystem").GetComponent<PauseMenu>().Pause();
-                                GameObject.Find("PlayButton").SetActive(false);
                             }
                         } else if (hit.transform.gameObject != elem.objectTarget && currentStep == elem.stepOrder && !audioSource.isPlaying) {
                             PlayAudio(elem.missTap);

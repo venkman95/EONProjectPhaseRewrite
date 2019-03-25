@@ -3561,6 +3561,7 @@ MonoBehaviour:
   steps:
   - objectTarget: {fileID: 1652731954}
     audioClip: {fileID: 8300000, guid: 7ad8cbf2090df804a9f5aa5586a33a12, type: 3}
+    missTap: {fileID: 0}
     animClip: {fileID: 7400000, guid: f95e2e48a5d4d214b8bfdb286c276deb, type: 2}
     stepOrder: 0
     highlightThis: {fileID: 7400000, guid: ea74d62f89d39b24eafb98d237c2e4bf, type: 2}
@@ -3572,8 +3573,13 @@ MonoBehaviour:
     manipulationType: 0
     manipulationAxis: 0
     manipulationMultiplier: 0
+    hasQuestion: 0
+    question: 
+    choices: []
+    correctChoice: 0
   - objectTarget: {fileID: 4197247634080686774}
     audioClip: {fileID: 8300000, guid: 6d12d19cf7ecb2045bf0ca4da2e49acd, type: 3}
+    missTap: {fileID: 0}
     animClip: {fileID: 7400000, guid: 6b9ec3e492b8e8d45b5841435946b2ed, type: 2}
     stepOrder: 1
     highlightThis: {fileID: 7400000, guid: 7ac908ab00b5b8745b99a854e16237fe, type: 2}
@@ -3585,8 +3591,13 @@ MonoBehaviour:
     manipulationType: 0
     manipulationAxis: 0
     manipulationMultiplier: 0
+    hasQuestion: 0
+    question: 
+    choices: []
+    correctChoice: 0
   - objectTarget: {fileID: 123484976}
     audioClip: {fileID: 8300000, guid: bed3f5387d8127a469daeb3507648dc7, type: 3}
+    missTap: {fileID: 0}
     animClip: {fileID: 7400000, guid: 1d5a869260c3f1943a8acddbffa406c9, type: 2}
     stepOrder: 2
     highlightThis: {fileID: 7400000, guid: 1ad8be8f94a48b84187683f5ed080b52, type: 2}
@@ -3598,8 +3609,13 @@ MonoBehaviour:
     manipulationType: 0
     manipulationAxis: 0
     manipulationMultiplier: 0
+    hasQuestion: 0
+    question: 
+    choices: []
+    correctChoice: 0
   - objectTarget: {fileID: 4197247634080686774}
     audioClip: {fileID: 8300000, guid: 25ffe3d9e0e096244ad43179b0e6f24b, type: 3}
+    missTap: {fileID: 0}
     animClip: {fileID: 7400000, guid: a11d7451653bd92408be709ec01bb5c1, type: 2}
     stepOrder: 3
     highlightThis: {fileID: 7400000, guid: 460dc13dad7e50c4aac72235a7e2e6cd, type: 2}
@@ -3611,8 +3627,13 @@ MonoBehaviour:
     manipulationType: 0
     manipulationAxis: 0
     manipulationMultiplier: 0
+    hasQuestion: 0
+    question: 
+    choices: []
+    correctChoice: 0
   - objectTarget: {fileID: 4197247634080686774}
     audioClip: {fileID: 8300000, guid: d050ffe77225ef24e9d3399b54795b45, type: 3}
+    missTap: {fileID: 0}
     animClip: {fileID: 7400000, guid: 479544875708bb641b220c0baaf78896, type: 2}
     stepOrder: 4
     highlightThis: {fileID: 7400000, guid: 3798f15e899de514cb664b5096d77988, type: 2}
@@ -3624,8 +3645,13 @@ MonoBehaviour:
     manipulationType: 0
     manipulationAxis: 0
     manipulationMultiplier: 0
+    hasQuestion: 0
+    question: 
+    choices: []
+    correctChoice: 0
   - objectTarget: {fileID: 4197247634080686774}
     audioClip: {fileID: 8300000, guid: d952fc30ea047f84db9fda82a1ecaa0e, type: 3}
+    missTap: {fileID: 0}
     animClip: {fileID: 7400000, guid: 7a0445cbeb327ad4f9cb3084ff69a55f, type: 2}
     stepOrder: 5
     highlightThis: {fileID: 7400000, guid: cf0003375adfeb749ac20e3d7cfc2046, type: 2}
@@ -3637,6 +3663,10 @@ MonoBehaviour:
     manipulationType: 0
     manipulationAxis: 0
     manipulationMultiplier: 0
+    hasQuestion: 0
+    question: 
+    choices: []
+    correctChoice: 0
 --- !u!82 &2119829936
 AudioSource:
   m_ObjectHideFlags: 0
