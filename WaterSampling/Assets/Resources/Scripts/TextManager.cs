@@ -6,8 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class TextManager : MonoBehaviour
-{
+public class TextManager : MonoBehaviour {
     TextMeshProUGUI chapter1Title;
     TextMeshProUGUI chapter2Title;
     TextMeshProUGUI chapter3Title;
@@ -26,7 +25,7 @@ public class TextManager : MonoBehaviour
     Image module1;
     Image module2;
     Image module3;
-    
+
     //index variables are used to keep track of where the user is in chapter select
     int lowerIndex = 0;
     int upperIndex = 2;
@@ -77,14 +76,14 @@ public class TextManager : MonoBehaviour
         eventManager.GetComponent<TextManager>().chapterSummaries = chapterSummaries;
         eventManager.GetComponent<TextManager>().chapterSprites = chapterSprites;
         eventManager.GetComponent<TextManager>().chapterSceneNums = chapterSceneNums;
-        
+
 
         //determines if the back/next chapters buttons are interactable
         if (lowerIndex == 0 && chapterTitles.Length > 3) {
             //if on first page and the amount of chapters is greater than 3
             moreChapters.GetComponent<Button>().interactable = true;
             prevChapters.GetComponent<Button>().interactable = false;
-        } else if(lowerIndex != 0){
+        } else if (lowerIndex != 0) {
             //if on second page
             moreChapters.GetComponent<Button>().interactable = false;
             prevChapters.GetComponent<Button>().interactable = true;
@@ -96,20 +95,20 @@ public class TextManager : MonoBehaviour
     public void HighlightModuleButton(int buttonPressed) {
         switch (buttonPressed) {
             case 0:
-            module1.color = new Color(0.9411765f,0.9019608f,0.1960784f);
-            module2.color = Color.white;
-            module3.color = Color.white;
-            break;
+                module1.color = new Color(0.9411765f,0.9019608f,0.1960784f);
+                module2.color = Color.white;
+                module3.color = Color.white;
+                break;
             case 1:
-            module1.color = Color.white;
-            module2.color = new Color(0.9411765f,0.9019608f,0.1960784f);
-            module3.color = Color.white;
-            break;
+                module1.color = Color.white;
+                module2.color = new Color(0.9411765f,0.9019608f,0.1960784f);
+                module3.color = Color.white;
+                break;
             case 2:
-            module1.color = Color.white;
-            module2.color = Color.white;
-            module3.color = new Color(0.9411765f,0.9019608f,0.1960784f);
-            break;
+                module1.color = Color.white;
+                module2.color = Color.white;
+                module3.color = new Color(0.9411765f,0.9019608f,0.1960784f);
+                break;
         }
     }
 
@@ -118,8 +117,8 @@ public class TextManager : MonoBehaviour
         //if going to next chapters
         if (buttonPressed == 1) {
             lowerIndex = 3;
-            for(int i = 3; i != 0; i--) {
-                if(upperIndex + i > chapterTitles.Length) {
+            for (int i = 3; i != 0; i--) {
+                if (upperIndex + i > chapterTitles.Length) {
                     upperIndex += i;
                     Debug.Log(upperIndex + " ch3");
                     break;
@@ -141,53 +140,53 @@ public class TextManager : MonoBehaviour
         switch (buttonPressed) {
             //if statements to check if user is on first or second page of chapters
             case 0:
-                Debug.Log(upperIndex+" load scene");
-            if(upperIndex != 2) {
-                //load scene from given index in array
-                SceneManager.LoadScene(eventManager.GetComponent<TextManager>().chapterSceneNums[3]);
-            } else {
-                SceneManager.LoadScene(eventManager.GetComponent<TextManager>().chapterSceneNums[0]);
-            }
-            break;
+                Debug.Log(upperIndex + " load scene");
+                if (upperIndex != 2) {
+                    //load scene from given index in array
+                    SceneManager.LoadScene(eventManager.GetComponent<TextManager>().chapterSceneNums[3]);
+                } else {
+                    SceneManager.LoadScene(eventManager.GetComponent<TextManager>().chapterSceneNums[0]);
+                }
+                break;
             case 1:
-            if (upperIndex != 2) {
-                SceneManager.LoadScene(eventManager.GetComponent<TextManager>().chapterSceneNums[4]);
-            } else {
-                SceneManager.LoadScene(eventManager.GetComponent<TextManager>().chapterSceneNums[1]);
-            }
-            break;
+                if (upperIndex != 2) {
+                    SceneManager.LoadScene(eventManager.GetComponent<TextManager>().chapterSceneNums[4]);
+                } else {
+                    SceneManager.LoadScene(eventManager.GetComponent<TextManager>().chapterSceneNums[1]);
+                }
+                break;
             case 2:
-            if (upperIndex != 2) {
-                SceneManager.LoadScene(eventManager.GetComponent<TextManager>().chapterSceneNums[5]);
-            } else {
-                SceneManager.LoadScene(eventManager.GetComponent<TextManager>().chapterSceneNums[2]);
-            }
-            break;
+                if (upperIndex != 2) {
+                    SceneManager.LoadScene(eventManager.GetComponent<TextManager>().chapterSceneNums[5]);
+                } else {
+                    SceneManager.LoadScene(eventManager.GetComponent<TextManager>().chapterSceneNums[2]);
+                }
+                break;
         }
     }
 
     //fades UI out, changes an elements that need to be changed, fades UI in
-    IEnumerator Fade(Color color, float time) {
+    IEnumerator Fade(Color color,float time) {
         //elapsedTime needed to keep track of time from when the function is called to the target fade time
         float elapsedTime = 0;
 
         //fade UI out
-        while(elapsedTime < time) {
+        while (elapsedTime < time) {
             //fades the alpha channel from the color value given down to 0 over the given float time
-            chapter1Title.color = new Color(color.r, color.g, color.b,Mathf.Lerp(color.a,0,(elapsedTime / time)));
+            chapter1Title.color = new Color(color.r,color.g,color.b,Mathf.Lerp(color.a,0,(elapsedTime / time)));
             chapter2Title.color = new Color(color.r,color.g,color.b,Mathf.Lerp(color.a,0,(elapsedTime / time)));
             chapter3Title.color = new Color(color.r,color.g,color.b,Mathf.Lerp(color.a,0,(elapsedTime / time)));
             chapter1Summary.color = new Color(color.r,color.g,color.b,Mathf.Lerp(color.a,0,(elapsedTime / time)));
             chapter2Summary.color = new Color(color.r,color.g,color.b,Mathf.Lerp(color.a,0,(elapsedTime / time)));
             chapter3Summary.color = new Color(color.r,color.g,color.b,Mathf.Lerp(color.a,0,(elapsedTime / time)));
-            //0.31764f is hardcoded to keep track of sprit color
+            //0.31764f is hardcoded to keep track of sprite color
             chapter1Sprite.color = new Color(0.3176471f,0.3176471f,0.3176471f,Mathf.Lerp(color.a,0,(elapsedTime / time)));
             chapter2Sprite.color = new Color(0.3176471f,0.3176471f,0.3176471f,Mathf.Lerp(color.a,0,(elapsedTime / time)));
             chapter3Sprite.color = new Color(0.3176471f,0.3176471f,0.3176471f,Mathf.Lerp(color.a,0,(elapsedTime / time)));
 
             //update elapsed time
             elapsedTime += Time.deltaTime;
-            yield return null;  
+            yield return null;
         }
         //reset elapsedTime so that the UI can fade back in
         elapsedTime = 0;
@@ -205,102 +204,102 @@ public class TextManager : MonoBehaviour
         switch (upperIndex != 2) {
             //case true if on second page of chapters
             case true:
-            //assuming that if user is on second page of chapters index 3 will always be in bounds
-            //update top title text
-            chapter1Title.text = chapterTitles[3];
-            GameObject.Find("Chapter1").GetComponent<Button>().interactable = true;
-            //add top title text element to list of text elements to be faded in
-            tTFI.Add(chapter1Title);
-            //not always going to be more than one chapter on a page
-            //if chapterTitles[4] is out of bounds catch and make the button not interactable
-            try { chapter2Title.text = chapterTitles[4]; trySuccess = true; } catch { GameObject.Find("Chapter2").GetComponent<Button>().interactable = false; }
-            if (trySuccess) {
-                //if chapterTitles[4] is in bounds add text element to list to be faded in
-                tTFI.Add(chapter2Title);
-                //reset trySuccess
-                trySuccess = !trySuccess;
-                //set button to be interactable
-                GameObject.Find("Chapter2").GetComponent<Button>().interactable = true;
-            }
-            try { chapter3Title.text = chapterTitles[5]; trySuccess = true; } catch { GameObject.Find("Chapter3").GetComponent<Button>().interactable = false; }
-            if (trySuccess) {
-                tTFI.Add(chapter3Title);
-                trySuccess = !trySuccess;
-                GameObject.Find("Chapter3").GetComponent<Button>().interactable = true;
-            }
-            chapter1Summary.text = chapterSummaries[3];
-            tTFI.Add(chapter1Summary);
-            try { chapter2Summary.text = chapterSummaries[4]; trySuccess = true; } catch { }
-            if (trySuccess) {
-                tTFI.Add(chapter2Summary);
-                trySuccess = !trySuccess;
-            }
-            try { chapter3Summary.text = chapterSummaries[5]; trySuccess = true; } catch { }
-            if (trySuccess) {
-                tTFI.Add(chapter3Summary);
-                trySuccess = !trySuccess;
-            }
-            chapter1Sprite.sprite = chapterSprites[3];
-            iTFI.Add(chapter1Sprite);
-            try { chapter2Sprite.sprite = chapterSprites[4]; trySuccess = true; } catch { }
-            if (trySuccess) {
-                iTFI.Add(chapter2Sprite);
-                trySuccess = !trySuccess;
-            }
-            try { chapter3Sprite.sprite = chapterSprites[5]; trySuccess = true; } catch { }
-            if (trySuccess) {
-                iTFI.Add(chapter3Sprite);
-                trySuccess = !trySuccess;
-            }
-            break;
+                //assuming that if user is on second page of chapters index 3 will always be in bounds
+                //update top title text
+                chapter1Title.text = chapterTitles[3];
+                GameObject.Find("Chapter1").GetComponent<Button>().interactable = true;
+                //add top title text element to list of text elements to be faded in
+                tTFI.Add(chapter1Title);
+                //not always going to be more than one chapter on a page
+                //if chapterTitles[4] is out of bounds catch and make the button not interactable
+                try { chapter2Title.text = chapterTitles[4]; trySuccess = true; } catch { GameObject.Find("Chapter2").GetComponent<Button>().interactable = false; }
+                if (trySuccess) {
+                    //if chapterTitles[4] is in bounds add text element to list to be faded in
+                    tTFI.Add(chapter2Title);
+                    //reset trySuccess
+                    trySuccess = !trySuccess;
+                    //set button to be interactable
+                    GameObject.Find("Chapter2").GetComponent<Button>().interactable = true;
+                }
+                try { chapter3Title.text = chapterTitles[5]; trySuccess = true; } catch { GameObject.Find("Chapter3").GetComponent<Button>().interactable = false; }
+                if (trySuccess) {
+                    tTFI.Add(chapter3Title);
+                    trySuccess = !trySuccess;
+                    GameObject.Find("Chapter3").GetComponent<Button>().interactable = true;
+                }
+                chapter1Summary.text = chapterSummaries[3];
+                tTFI.Add(chapter1Summary);
+                try { chapter2Summary.text = chapterSummaries[4]; trySuccess = true; } catch { }
+                if (trySuccess) {
+                    tTFI.Add(chapter2Summary);
+                    trySuccess = !trySuccess;
+                }
+                try { chapter3Summary.text = chapterSummaries[5]; trySuccess = true; } catch { }
+                if (trySuccess) {
+                    tTFI.Add(chapter3Summary);
+                    trySuccess = !trySuccess;
+                }
+                chapter1Sprite.sprite = chapterSprites[3];
+                iTFI.Add(chapter1Sprite);
+                try { chapter2Sprite.sprite = chapterSprites[4]; trySuccess = true; } catch { }
+                if (trySuccess) {
+                    iTFI.Add(chapter2Sprite);
+                    trySuccess = !trySuccess;
+                }
+                try { chapter3Sprite.sprite = chapterSprites[5]; trySuccess = true; } catch { }
+                if (trySuccess) {
+                    iTFI.Add(chapter3Sprite);
+                    trySuccess = !trySuccess;
+                }
+                break;
             //case false if on first page of chapters
             case false:
-            chapter1Title.text = chapterTitles[0];
-            GameObject.Find("Chapter1").GetComponent<Button>().interactable = true;
-            tTFI.Add(chapter1Title);
-            try { chapter2Title.text = chapterTitles[1]; trySuccess = true; } catch { GameObject.Find("Chapter2").GetComponent<Button>().interactable = false; }
-            if (trySuccess) {
-                tTFI.Add(chapter2Title);
-                trySuccess = !trySuccess;
-                GameObject.Find("Chapter2").GetComponent<Button>().interactable = true;
-            }
-            try { chapter3Title.text = chapterTitles[2]; trySuccess = true; } catch { GameObject.Find("Chapter3").GetComponent<Button>().interactable = false; }
-            if (trySuccess) {
-                tTFI.Add(chapter3Title);
-                trySuccess = !trySuccess;
-                GameObject.Find("Chapter3").GetComponent<Button>().interactable = true;
-            }
-            chapter1Summary.text = chapterSummaries[0];
-            tTFI.Add(chapter1Summary);
-            try { chapter2Summary.text = chapterSummaries[1]; trySuccess = true; } catch { }
-            if (trySuccess) {
-                tTFI.Add(chapter2Summary);
-                trySuccess = !trySuccess;
-            }
-            try { chapter3Summary.text = chapterSummaries[2]; trySuccess = true; } catch { }
-            if (trySuccess) {
-                tTFI.Add(chapter3Summary);
-                trySuccess = !trySuccess;
-            }
-            chapter1Sprite.sprite = chapterSprites[0];
-            iTFI.Add(chapter1Sprite);
-            try { chapter2Sprite.sprite = chapterSprites[1]; trySuccess = true; } catch { }
-            if (trySuccess) {
-                iTFI.Add(chapter2Sprite);
-                trySuccess = !trySuccess;
-            }
-            try { chapter3Sprite.sprite = chapterSprites[2]; trySuccess = true; } catch { }
-            if (trySuccess) {
-                iTFI.Add(chapter3Sprite);
-                trySuccess = !trySuccess;
-            }
-            break;
+                chapter1Title.text = chapterTitles[0];
+                GameObject.Find("Chapter1").GetComponent<Button>().interactable = true;
+                tTFI.Add(chapter1Title);
+                try { chapter2Title.text = chapterTitles[1]; trySuccess = true; } catch { GameObject.Find("Chapter2").GetComponent<Button>().interactable = false; }
+                if (trySuccess) {
+                    tTFI.Add(chapter2Title);
+                    trySuccess = !trySuccess;
+                    GameObject.Find("Chapter2").GetComponent<Button>().interactable = true;
+                }
+                try { chapter3Title.text = chapterTitles[2]; trySuccess = true; } catch { GameObject.Find("Chapter3").GetComponent<Button>().interactable = false; }
+                if (trySuccess) {
+                    tTFI.Add(chapter3Title);
+                    trySuccess = !trySuccess;
+                    GameObject.Find("Chapter3").GetComponent<Button>().interactable = true;
+                }
+                chapter1Summary.text = chapterSummaries[0];
+                tTFI.Add(chapter1Summary);
+                try { chapter2Summary.text = chapterSummaries[1]; trySuccess = true; } catch { }
+                if (trySuccess) {
+                    tTFI.Add(chapter2Summary);
+                    trySuccess = !trySuccess;
+                }
+                try { chapter3Summary.text = chapterSummaries[2]; trySuccess = true; } catch { }
+                if (trySuccess) {
+                    tTFI.Add(chapter3Summary);
+                    trySuccess = !trySuccess;
+                }
+                chapter1Sprite.sprite = chapterSprites[0];
+                iTFI.Add(chapter1Sprite);
+                try { chapter2Sprite.sprite = chapterSprites[1]; trySuccess = true; } catch { }
+                if (trySuccess) {
+                    iTFI.Add(chapter2Sprite);
+                    trySuccess = !trySuccess;
+                }
+                try { chapter3Sprite.sprite = chapterSprites[2]; trySuccess = true; } catch { }
+                if (trySuccess) {
+                    iTFI.Add(chapter3Sprite);
+                    trySuccess = !trySuccess;
+                }
+                break;
         }
 
         //fade UI back in
         while (elapsedTime < time) {
             //fade each text element from list back in from the given color value to an alpha of 1
-            foreach(TextMeshProUGUI elem in tTFI) {
+            foreach (TextMeshProUGUI elem in tTFI) {
                 elem.color = new Color(color.r,color.g,color.b,Mathf.Lerp(color.a,1,(elapsedTime / time)));
             }
             //fade each sprite element from list back in from the hard coded value to an alpha of 1
