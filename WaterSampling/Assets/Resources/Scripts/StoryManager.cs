@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
 using TMPro;
+using Vuforia;
 
 public class StoryManager : MonoBehaviour {
 
@@ -28,6 +29,7 @@ public class StoryManager : MonoBehaviour {
     AudioSource audioSource;
 
     public int currentStep;
+    private bool introPlayed = false;
 
     [SerializeField]
     public AudioClip introAudio;
@@ -52,6 +54,10 @@ public class StoryManager : MonoBehaviour {
         public AnimationClip animClip;
         [SerializeField]
         public int stepOrder;
+        [SerializeField]
+        public AnimationClip highlightThis;
+        [SerializeField]
+        public GameObject highlightTarget;
         [SerializeField]
         public TapOrDrag tapOrDrag;
         [SerializeField]
@@ -87,18 +93,25 @@ public class StoryManager : MonoBehaviour {
         qAPanel.SetActive(false);
         //move this to play intro audio when the marker first comes into view
         AudioListener.pause = false;
-        PlayAudio(introAudio);
+        //firstTarget.GetComponent<Animator>().Play(firstHighlight.name);
     }
 
     public void Update() {
+        if (!audioSource.isPlaying && introPlayed==true)
+        {
+            steps[currentStep].highlightTarget.gameObject.GetComponent<Animator>().Play(steps[currentStep].highlightThis.name);
+        }
         for (var i = 0; i < Input.touchCount; ++i) {
             if (Input.GetTouch(i).phase == TouchPhase.Began) {
                 Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
                 RaycastHit hit;
-                if (Physics.Raycast(ray,out hit)) {
+                if (Physics.Raycast(ray, out hit)) {
+                    
                     //GameObject.Find("TextMeshPro Text").GetComponent<TextMeshProUGUI>().text = hit.transform.gameObject.name;
                     foreach (Step elem in steps) {
-                        if (hit.transform.gameObject == elem.objectTarget && currentStep == elem.stepOrder && (!audioSource.isPlaying && !audioSource.loop)) {
+                        if(hit.transform.gameObject == elem.objectTarget && currentStep == elem.stepOrder && (!audioSource.isPlaying && !audioSource.loop)) {
+
+
                             currentStep++;
                             if (elem.animClip != null) {
                                 //play the animation for the step
@@ -148,7 +161,18 @@ public class StoryManager : MonoBehaviour {
         audioSource.Play();
     }
 
+    public void PlayIntro()
+    {
+        if (introPlayed == false)
+        {
+            introPlayed = true;
+            PlayAudio(introAudio);
+        }
+    }
+
+
     //adjusts the position/rotation/scale of the object along one axis depending on the value of the slider.
+
     public void CheckSlider(Step elem) {
         Vector3 p = elem.objectTarget.transform.localPosition;
         Quaternion r = elem.objectTarget.transform.localRotation;
