@@ -24,7 +24,7 @@ public class StoryManager : MonoBehaviour {
         Z
     }
 
-    GameObject questionPanel;
+    GameObject qAPanel;
 
     AudioSource audioSource;
 
@@ -84,13 +84,13 @@ public class StoryManager : MonoBehaviour {
     }
 
     public void Awake() {
-        questionPanel = GameObject.Find("QuestionPanel");
+        qAPanel = GameObject.Find("QAPanel");
         audioSource = GetComponent<AudioSource>();
         currentStep = 0;
     }
 
     public void Start() {
-        questionPanel.SetActive(false);
+        qAPanel.SetActive(false);
         //move this to play intro audio when the marker first comes into view
         AudioListener.pause = false;
         //firstTarget.GetComponent<Animator>().Play(firstHighlight.name);
@@ -133,10 +133,10 @@ public class StoryManager : MonoBehaviour {
                             }
                             if (elem.hasQuestion) {
                                 //send necessary data to the QuestionManager and call Question()
-                                questionPanel.GetComponent<QuestionManager>().question = elem.question;
-                                questionPanel.GetComponent<QuestionManager>().choices = elem.choices;
-                                questionPanel.GetComponent<QuestionManager>().answer = elem.correctChoice;
-                                questionPanel.GetComponent<QuestionManager>().Question();
+                                qAPanel.GetComponent<QuestionManager>().question = elem.question;
+                                qAPanel.GetComponent<QuestionManager>().choices = elem.choices;
+                                qAPanel.GetComponent<QuestionManager>().answer = elem.correctChoice;
+                                Invoke("Question", elem.audioClip.length);
                             }
                             if (currentStep == steps.Length) {
                                 //PlayAudio(outroAudio);
@@ -150,6 +150,10 @@ public class StoryManager : MonoBehaviour {
                 }
             }
         }
+    }
+
+    public void Question() {
+        qAPanel.GetComponent<QuestionManager>().Question();
     }
 
     public void PlayAudio(AudioClip audio) {

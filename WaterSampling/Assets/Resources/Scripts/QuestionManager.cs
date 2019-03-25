@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class QuestionManager : MonoBehaviour
 {
@@ -9,11 +10,19 @@ public class QuestionManager : MonoBehaviour
     public int answer;
     public string[] choices;
     List<GameObject> answerLayouts;
+    GameObject qAPanel;
+    GameObject questionPanel;
 
     private void Awake() {
+        qAPanel = GameObject.Find("QAPanel");
+        questionPanel = GameObject.Find("QuestionPanel");
         answerLayouts.Add(GameObject.Find("AnswerLayout2"));
         answerLayouts.Add(GameObject.Find("AnswerLayout3"));
         answerLayouts.Add(GameObject.Find("AnswerLayout4"));
+    }
+
+    private void Start() {
+        
     }
 
     public void Question() {
@@ -22,22 +31,32 @@ public class QuestionManager : MonoBehaviour
 
     //FadeUI coroutine
     IEnumerator FadeUI(float targetTime, bool fadeIn) {
-        List<GameObject> toBeFaded = new List<GameObject>();
+        List<TextMeshProUGUI> textToBeFaded = new List<TextMeshProUGUI>();
+        List<Image> imageToBeFaded = new List<Image>();
         //depending on the length of choices[] add button children from AnswerLayout2/3/4 to toBeFadedIn[]
+
+        textToBeFaded.Add(qAPanel.GetComponentInChildren<TextMeshProUGUI>());
+        textToBeFaded.Add(questionPanel.GetComponentInChildren<TextMeshProUGUI>());
+        imageToBeFaded.Add(qAPanel.GetComponent<Image>());
+        imageToBeFaded.Add(questionPanel.GetComponent<Image>());
+
         switch (choices.Length) {
             case 2:
                 foreach (Transform child in answerLayouts[0].transform) {
-                    toBeFaded.Add(child.gameObject);
+                    textToBeFaded.Add(child.GetChild(0).GetComponent<TextMeshProUGUI>());
+                    imageToBeFaded.Add(child.GetComponent<Image>());
                 }
                 break;
             case 3:
                 foreach (Transform child in answerLayouts[1].transform) {
-                    toBeFaded.Add(child.gameObject);
+                    textToBeFaded.Add(child.GetChild(0).GetComponent<TextMeshProUGUI>());
+                    imageToBeFaded.Add(child.GetComponent<Image>());
                 }
                 break;
             case 4:
                 foreach (Transform child in answerLayouts[2].transform) {
-                    toBeFaded.Add(child.gameObject);
+                    textToBeFaded.Add(child.GetChild(0).GetComponent<TextMeshProUGUI>());
+                    imageToBeFaded.Add(child.GetComponent<Image>());
                 }
                 break;
             default:
@@ -48,9 +67,19 @@ public class QuestionManager : MonoBehaviour
         float elapsedTime = 0;
         while(elapsedTime < targetTime) {
             if (fadeIn){
-
+                foreach (TextMeshProUGUI elem in textToBeFaded) {
+                    elem.color = new Color(0,0,0,Mathf.Lerp(0,1,(elapsedTime / targetTime)));
+                }
+                foreach (Image elem in imageToBeFaded) {
+                    elem.color = new Color(1,1,1,Mathf.Lerp(0,1,(elapsedTime / targetTime)));
+                }
             } else {
-
+                foreach (TextMeshProUGUI elem in textToBeFaded) {
+                    elem.color = new Color(0,0,0,Mathf.Lerp(1,0,(elapsedTime / targetTime)));
+                }
+                foreach (Image elem in imageToBeFaded) {
+                    elem.color = new Color(1,1,1,Mathf.Lerp(1,0,(elapsedTime / targetTime)));
+                }
             }
             elapsedTime += Time.deltaTime;
             yield return null;
