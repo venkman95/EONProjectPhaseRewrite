@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Menu.unity
     guid: 9b0d526cc3d8d1047a946c5b0cb64270
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/VuforiaTemplate.unity
     guid: ab64ab0dd423d3d419475d0b1d9bd445
   - enabled: 0
