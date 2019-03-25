@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1945,7 +1945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.25, g: 0.25, b: 0.25, a: 0.7490196}
+  m_Color: {r: 0.25, g: 0.25, b: 0.25, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2729,8 +2729,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 0
+  m_fontColor: {r: 0, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3028,7 +3028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3551,8 +3551,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 0
+  m_fontColor: {r: 0, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3946,7 +3946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4871,8 +4871,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 0
+  m_fontColor: {r: 0, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5205,10 +5205,34 @@ MonoBehaviour:
     missTap: {fileID: 0}
     animClip: {fileID: 0}
     stepOrder: 0
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
-    hasSlider: 1
+    hasSlider: 0
     sliderTarget: 1
-    manipulateObject: 1
+    manipulateObject: 0
+    manipulationType: 1
+    manipulationAxis: 0
+    manipulationMultiplier: 10
+    hasQuestion: 0
+    question: Past tense of yeet
+    choices:
+    - yeet
+    - yoot
+    - yate
+    - yote
+    correctChoice: 2
+  - objectTarget: {fileID: 599141946}
+    audioClip: {fileID: 0}
+    missTap: {fileID: 0}
+    animClip: {fileID: 0}
+    stepOrder: 0
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
+    tapOrDrag: 0
+    hasSlider: 0
+    sliderTarget: 1
+    manipulateObject: 0
     manipulationType: 1
     manipulationAxis: 0
     manipulationMultiplier: 10

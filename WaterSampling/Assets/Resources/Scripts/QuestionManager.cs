@@ -65,20 +65,31 @@ public class QuestionManager : MonoBehaviour
 
         }
         float elapsedTime = 0;
+
+        //update text boxes
+
         while(elapsedTime < targetTime) {
             if (fadeIn){
                 foreach (TextMeshProUGUI elem in textToBeFaded) {
                     elem.color = new Color(0,0,0,Mathf.Lerp(0,1,(elapsedTime / targetTime)));
                 }
                 foreach (Image elem in imageToBeFaded) {
-                    elem.color = new Color(1,1,1,Mathf.Lerp(0,1,(elapsedTime / targetTime)));
+                    if(elem.gameObject.name == "QAPanel") {
+                        elem.color = new Color(1,1,1,Mathf.Lerp(0,0.75f,(elapsedTime / targetTime)));
+                    } else {
+                        elem.color = new Color(1,1,1,Mathf.Lerp(0,1,(elapsedTime / targetTime)));
+                    }
                 }
             } else {
                 foreach (TextMeshProUGUI elem in textToBeFaded) {
                     elem.color = new Color(0,0,0,Mathf.Lerp(1,0,(elapsedTime / targetTime)));
                 }
                 foreach (Image elem in imageToBeFaded) {
-                    elem.color = new Color(1,1,1,Mathf.Lerp(1,0,(elapsedTime / targetTime)));
+                    if (elem.gameObject.name == "QAPanel") {
+                        elem.color = new Color(1,1,1,Mathf.Lerp(0.75f,0,(elapsedTime / targetTime)));
+                    } else {
+                        elem.color = new Color(1,1,1,Mathf.Lerp(1,0,(elapsedTime / targetTime)));
+                    }
                 }
             }
             elapsedTime += Time.deltaTime;
