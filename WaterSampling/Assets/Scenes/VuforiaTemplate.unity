@@ -5214,7 +5214,29 @@ MonoBehaviour:
     manipulationType: 1
     manipulationAxis: 0
     manipulationMultiplier: 10
-    hasQuestion: 0
+    hasQuestion: 1
+    question: Past tense of yeet
+    choices:
+    - yeet
+    - yoot
+    - yate
+    - yote
+    correctChoice: 2
+  - objectTarget: {fileID: 0}
+    audioClip: {fileID: 0}
+    missTap: {fileID: 0}
+    animClip: {fileID: 0}
+    stepOrder: 1
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
+    tapOrDrag: 0
+    hasSlider: 0
+    sliderTarget: 1
+    manipulateObject: 0
+    manipulationType: 1
+    manipulationAxis: 0
+    manipulationMultiplier: 10
+    hasQuestion: 1
     question: Past tense of yeet
     choices:
     - yeet
@@ -5226,7 +5248,29 @@ MonoBehaviour:
     audioClip: {fileID: 0}
     missTap: {fileID: 0}
     animClip: {fileID: 0}
-    stepOrder: 0
+    stepOrder: 2
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
+    tapOrDrag: 0
+    hasSlider: 0
+    sliderTarget: 1
+    manipulateObject: 0
+    manipulationType: 1
+    manipulationAxis: 0
+    manipulationMultiplier: 10
+    hasQuestion: 1
+    question: Past tense of yeet
+    choices:
+    - yeet
+    - yoot
+    - yate
+    - yote
+    correctChoice: 2
+  - objectTarget: {fileID: 599141946}
+    audioClip: {fileID: 0}
+    missTap: {fileID: 0}
+    animClip: {fileID: 0}
+    stepOrder: 3
     highlightThis: {fileID: 0}
     highlightTarget: {fileID: 0}
     tapOrDrag: 0
