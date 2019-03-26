@@ -3708,8 +3708,8 @@ MonoBehaviour:
     missTap: {fileID: 0}
     animClip: {fileID: 7400000, guid: a97a7f6eb3ab07042980e3f0aa2cd302, type: 2}
     stepOrder: 0
-    highlightThis: {fileID: 7400000, guid: f9ec3d66019f9fd4c841f39c11af0f6f, type: 2}
-    highlightTarget: {fileID: 1436144833}
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3726,8 +3726,8 @@ MonoBehaviour:
     missTap: {fileID: 0}
     animClip: {fileID: 7400000, guid: 4b36eba7399e2ff4aab8dcc4fe384fb8, type: 2}
     stepOrder: 1
-    highlightThis: {fileID: 7400000, guid: 9cf5d9734635afb48916eaf054782355, type: 2}
-    highlightTarget: {fileID: 1652766366}
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3744,8 +3744,8 @@ MonoBehaviour:
     missTap: {fileID: 0}
     animClip: {fileID: 7400000, guid: 34b17b7a7a15f9d498328f1522b7acdd, type: 2}
     stepOrder: 2
-    highlightThis: {fileID: 7400000, guid: 85d161f1b736ceb448099b6fd629974c, type: 2}
-    highlightTarget: {fileID: 1436144837}
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3762,8 +3762,8 @@ MonoBehaviour:
     missTap: {fileID: 0}
     animClip: {fileID: 7400000, guid: 69c066afce4e29942a517b0abac95a2b, type: 2}
     stepOrder: 3
-    highlightThis: {fileID: 7400000, guid: dbf0319ff0cb15b4dbda40149a1c5b56, type: 2}
-    highlightTarget: {fileID: 1436144837}
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3780,8 +3780,8 @@ MonoBehaviour:
     missTap: {fileID: 0}
     animClip: {fileID: 7400000, guid: 2e82a5265037fdc48a6e0e74881143d5, type: 2}
     stepOrder: 4
-    highlightThis: {fileID: 7400000, guid: 906be4933c814d64d8cd74db1fd3781e, type: 2}
-    highlightTarget: {fileID: 511655155}
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3798,8 +3798,8 @@ MonoBehaviour:
     missTap: {fileID: 0}
     animClip: {fileID: 7400000, guid: 4d7f8cd3ace22fe48a630e845c9f51c1, type: 2}
     stepOrder: 5
-    highlightThis: {fileID: 7400000, guid: 25f3d50298ec5d04a9a19648810757ec, type: 2}
-    highlightTarget: {fileID: 511655159}
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3816,8 +3816,8 @@ MonoBehaviour:
     missTap: {fileID: 0}
     animClip: {fileID: 7400000, guid: 3d1995dfa85b16f4b877b7f8b9ce0690, type: 2}
     stepOrder: 6
-    highlightThis: {fileID: 7400000, guid: 649f4210d78e9a84ab6f0f0d37eae154, type: 2}
-    highlightTarget: {fileID: 511655159}
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3834,8 +3834,8 @@ MonoBehaviour:
     missTap: {fileID: 0}
     animClip: {fileID: 7400000, guid: 12e333a5b097b074abb48eec73502b2f, type: 2}
     stepOrder: 7
-    highlightThis: {fileID: 7400000, guid: 409d514bd74e0f04da50b1667a58fc14, type: 2}
-    highlightTarget: {fileID: 511655155}
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3852,8 +3852,8 @@ MonoBehaviour:
     missTap: {fileID: 0}
     animClip: {fileID: 7400000, guid: 56fe50d693e6379469e035b5c2b49a3e, type: 2}
     stepOrder: 8
-    highlightThis: {fileID: 7400000, guid: b0e91ef2a44a4264e9e8e36eb02dda57, type: 2}
-    highlightTarget: {fileID: 1436144837}
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3870,8 +3870,8 @@ MonoBehaviour:
     missTap: {fileID: 0}
     animClip: {fileID: 7400000, guid: 03ee40514dcb3d849ad7146b391a6387, type: 2}
     stepOrder: 9
-    highlightThis: {fileID: 7400000, guid: a328ca369c21f6c4bab32017242d7d8f, type: 2}
-    highlightTarget: {fileID: 1436144833}
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0

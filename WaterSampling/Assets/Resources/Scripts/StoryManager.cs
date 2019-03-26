@@ -123,6 +123,7 @@ public class StoryManager : MonoBehaviour {
                                 //play audio for the step
                                 PlayAudio(elem.audioClip);
                             }
+                            
                             if (elem.hasSlider) {
                                 if (!slider.activeSelf) {
                                     //activate slider and add an EventListener that calls CheckSlider(Step) everytime the slider value changes

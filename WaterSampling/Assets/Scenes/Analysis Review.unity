@@ -3607,8 +3607,8 @@ MonoBehaviour:
     missTap: {fileID: 0}
     animClip: {fileID: 7400000, guid: 6b9ec3e492b8e8d45b5841435946b2ed, type: 2}
     stepOrder: 1
-    highlightThis: {fileID: 7400000, guid: 7ac908ab00b5b8745b99a854e16237fe, type: 2}
-    highlightTarget: {fileID: 517210782}
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3625,8 +3625,8 @@ MonoBehaviour:
     missTap: {fileID: 0}
     animClip: {fileID: 7400000, guid: 1d5a869260c3f1943a8acddbffa406c9, type: 2}
     stepOrder: 2
-    highlightThis: {fileID: 7400000, guid: 1ad8be8f94a48b84187683f5ed080b52, type: 2}
-    highlightTarget: {fileID: 123484976}
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3643,8 +3643,8 @@ MonoBehaviour:
     missTap: {fileID: 0}
     animClip: {fileID: 7400000, guid: a11d7451653bd92408be709ec01bb5c1, type: 2}
     stepOrder: 3
-    highlightThis: {fileID: 7400000, guid: 460dc13dad7e50c4aac72235a7e2e6cd, type: 2}
-    highlightTarget: {fileID: 517210782}
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3661,8 +3661,8 @@ MonoBehaviour:
     missTap: {fileID: 0}
     animClip: {fileID: 7400000, guid: 479544875708bb641b220c0baaf78896, type: 2}
     stepOrder: 4
-    highlightThis: {fileID: 7400000, guid: 3798f15e899de514cb664b5096d77988, type: 2}
-    highlightTarget: {fileID: 517210782}
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3679,8 +3679,8 @@ MonoBehaviour:
     missTap: {fileID: 0}
     animClip: {fileID: 7400000, guid: 7a0445cbeb327ad4f9cb3084ff69a55f, type: 2}
     stepOrder: 5
-    highlightThis: {fileID: 7400000, guid: cf0003375adfeb749ac20e3d7cfc2046, type: 2}
-    highlightTarget: {fileID: 517210782}
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
