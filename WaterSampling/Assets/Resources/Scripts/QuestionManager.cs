@@ -26,6 +26,7 @@ public class QuestionManager : MonoBehaviour
     }
 
     public void Question() {
+        Debug.Log("Question yeet");
         StartCoroutine(FadeUI(1,true));
     }
 
@@ -54,7 +55,9 @@ public class QuestionManager : MonoBehaviour
                 }
                 break;
             case 4:
+                Debug.Log("Choices yeet");
                 foreach (Transform child in answerLayouts[2].transform) {
+                    Debug.Log("YAAT");
                     textToBeFaded.Add(child.GetChild(0).GetComponent<TextMeshProUGUI>());
                     imageToBeFaded.Add(child.GetComponent<Image>());
                 }
@@ -69,6 +72,7 @@ public class QuestionManager : MonoBehaviour
         //update text boxes
 
         while(elapsedTime < targetTime) {
+            Debug.Log("yeet" + elapsedTime);
             if (fadeIn){
                 foreach (TextMeshProUGUI elem in textToBeFaded) {
                     elem.color = new Color(0,0,0,Mathf.Lerp(0,1,(elapsedTime / targetTime)));
