@@ -4127,10 +4127,10 @@ MonoBehaviour:
     question: 
     choices: []
     correctChoice: 0
-  - objectTarget: {fileID: 1652766364}
+  - objectTarget: {fileID: 1652766366}
     audioClip: {fileID: 8300000, guid: 1ceb315f54211b64aada264e992ef16e, type: 3}
     missTap: {fileID: 0}
-    animClip: {fileID: 7400000, guid: bb66607825a7d0a4086c86e4c13cfacc, type: 2}
+    animClip: {fileID: 7400000, guid: 4b36eba7399e2ff4aab8dcc4fe384fb8, type: 2}
     stepOrder: 3
     highlightThis: {fileID: 7400000, guid: 9cf5d9734635afb48916eaf054782355, type: 2}
     highlightTarget: {fileID: 1652766366}

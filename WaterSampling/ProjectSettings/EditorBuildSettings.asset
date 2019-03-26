@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Analysis.unity
     guid: dd442167e360f884e9ec80ed7633cdf6
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Collection.unity
     guid: 6edc27dff5c011f47b27afdeaa81c472
   - enabled: 0
