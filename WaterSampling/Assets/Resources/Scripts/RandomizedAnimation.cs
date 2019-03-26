@@ -21,11 +21,12 @@ public class RandomizedAnimation : MonoBehaviour
         if (storymanager.currentStep + 1 == steptoactivate && isrunning == false )
         {
             isrunning = true;
-            randomint = Random.Range(0, 2);
-            if (randomint == 1)
+            randomint = Random.Range(0, 4);
+            if (randomint == 3)
             {
                 Object.GetComponent<Animator>().Play(clipA.name);
-            }else
+            }
+            if (randomint < 3)
             {
                 Object.GetComponent<Animator>().Play(clipB.name);
             }
