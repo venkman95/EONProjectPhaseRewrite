@@ -6,13 +6,13 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cold_Knob_Top
+  m_Name: Jar
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
-    m_StateMachine: {fileID: 1107550505293285764}
+    m_StateMachine: {fileID: 1107406770161117658}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -22,14 +22,14 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1102 &1102121321688549260
+--- !u!1102 &1102185127184844258
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Off_Cold_Water
+  m_Name: Remove_Lid
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -42,20 +42,20 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 7b4eefd14a22db6429006bec0abf741b, type: 2}
+  m_Motion: {fileID: 7400000, guid: 6b9ec3e492b8e8d45b5841435946b2ed, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &1102186573674968392
+--- !u!1102 &1102211766895335954
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Half_Cold_Water
+  m_Name: Color_Review
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -68,20 +68,20 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: dbd8a1ae891eb744abfaecb0babf9909, type: 2}
+  m_Motion: {fileID: 7400000, guid: 7a0445cbeb327ad4f9cb3084ff69a55f, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &1102282235053354864
+--- !u!1102 &1102264828423218800
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Half_Cold_Water
+  m_Name: Close_Lid
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -94,20 +94,20 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: b4970a79af3689345b2e81ad6fc0967a, type: 2}
+  m_Motion: {fileID: 7400000, guid: a11d7451653bd92408be709ec01bb5c1, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &1102326505530324856
+--- !u!1102 &1102393156013263152
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Half_Off_Close_Water
+  m_Name: Highlight_Lid_Red
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -120,13 +120,39 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 012723d08093e1e418c26ed039b02f0a, type: 2}
+  m_Motion: {fileID: 7400000, guid: cf0003375adfeb749ac20e3d7cfc2046, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &1102327488646312484
+--- !u!1102 &1102562912300287928
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Highlight_Lid
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 7ac908ab00b5b8745b99a854e16237fe, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1102 &1102576991789512060
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
@@ -152,14 +178,14 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &1102508254191495122
+--- !u!1102 &1102653550284709398
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Open_Cold_Water
+  m_Name: Highlight_Jar
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -172,20 +198,20 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 97e0be5613c7044488d53c5b46ff78e2, type: 2}
+  m_Motion: {fileID: 7400000, guid: 3798f15e899de514cb664b5096d77988, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &1102982515662040320
+--- !u!1102 &1102735421803008456
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Half_Cold_Water
+  m_Name: Shake_Jar
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -198,13 +224,65 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: b4970a79af3689345b2e81ad6fc0967a, type: 2}
+  m_Motion: {fileID: 7400000, guid: 479544875708bb641b220c0baaf78896, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1107 &1107550505293285764
+--- !u!1102 &1102801026518463888
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Highlight_Lid_Off
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 460dc13dad7e50c4aac72235a7e2e6cd, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1102 &1102871687740806434
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GoodColiform
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 5421785afe1b8e742a74674363d27fdd, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1107 &1107406770161117658
 AnimatorStateMachine:
   serializedVersion: 5
   m_ObjectHideFlags: 1
@@ -214,20 +292,35 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: 1102327488646312484}
-    m_Position: {x: 48, y: 264, z: 0}
+    m_State: {fileID: 1102576991789512060}
+    m_Position: {x: 144, y: 228, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 1102121321688549260}
-    m_Position: {x: 556.80005, y: 230.15152, z: 0}
+    m_State: {fileID: 1102735421803008456}
+    m_Position: {x: 360, y: 48, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 1102508254191495122}
-    m_Position: {x: 507.20007, y: 124.55151, z: 0}
+    m_State: {fileID: 1102211766895335954}
+    m_Position: {x: 395, y: 113, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 1102326505530324856}
-    m_Position: {x: 563.2001, y: 343.7515, z: 0}
+    m_State: {fileID: 1102264828423218800}
+    m_Position: {x: 430, y: 178, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 1102186573674968392}
-    m_Position: {x: 336, y: 396, z: 0}
+    m_State: {fileID: 1102185127184844258}
+    m_Position: {x: 465, y: 243, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 1102562912300287928}
+    m_Position: {x: 500, y: 308, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 1102653550284709398}
+    m_Position: {x: 535, y: 373, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 1102801026518463888}
+    m_Position: {x: 570, y: 438, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 1102393156013263152}
+    m_Position: {x: 605, y: 503, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 1102871687740806434}
+    m_Position: {x: 374.0408, y: 495.74997, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -237,4 +330,4 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 1102327488646312484}
+  m_DefaultState: {fileID: 1102576991789512060}

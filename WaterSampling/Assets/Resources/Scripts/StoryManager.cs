@@ -95,16 +95,17 @@ public class StoryManager : MonoBehaviour {
     }
 
     public void Update() {
-        if (!audioSource.isPlaying && introPlayed == true) {
-            steps[currentStep].highlightTarget.gameObject.GetComponent<Animator>().Play(steps[currentStep].highlightThis.name);
-        }
-        if (currentStep == steps.Length && !audioSource.isPlaying && finished == false) {
+        if (currentStep == steps.Length && !audioSource.isPlaying && finished==false)
+        {
             finished = true;
             //PlayAudio(outroAudio);
             GameObject.Find("EventSystem").GetComponent<PauseMenu>().Pause();
             GameObject.Find("PlayButton").SetActive(false);
         }
-        for (var i = 0; i < Input.touchCount; i++) {
+        if (!audioSource.isPlaying && introPlayed==true) {
+            steps[currentStep].highlightTarget.gameObject.GetComponent<Animator>().Play(steps[currentStep].highlightThis.name);
+        }
+        for (var i = 0; i < Input.touchCount; ++i) {
             if (Input.GetTouch(i).phase == TouchPhase.Began) {
                 Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
                 RaycastHit hit;
@@ -137,10 +138,8 @@ public class StoryManager : MonoBehaviour {
                                 qAPanel.GetComponent<QuestionManager>().choices = elem.choices;
                                 qAPanel.GetComponent<QuestionManager>().answer = elem.correctChoice;
                                 if (elem.audioClip != null) {
-                                    Debug.Log("invoke yeet");
                                     Invoke("Question",elem.audioClip.length);
                                 }
-                                Debug.Log("yeet");
                                 Question();
                             }
                         } else if (hit.transform.gameObject != elem.objectTarget && currentStep == elem.stepOrder && !audioSource.isPlaying) {
@@ -153,7 +152,6 @@ public class StoryManager : MonoBehaviour {
     }
 
     public void Question() {
-        Debug.Log("yeet");
         qAPanel.GetComponent<QuestionManager>().Question();
         Debug.Log("yeet");
     }
