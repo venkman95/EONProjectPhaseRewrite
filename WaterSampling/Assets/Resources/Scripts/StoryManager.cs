@@ -98,6 +98,12 @@ public class StoryManager : MonoBehaviour {
         if (!audioSource.isPlaying && introPlayed == true) {
             steps[currentStep].highlightTarget.gameObject.GetComponent<Animator>().Play(steps[currentStep].highlightThis.name);
         }
+        if (currentStep == steps.Length && !audioSource.isPlaying && finished == false) {
+            finished = true;
+            //PlayAudio(outroAudio);
+            GameObject.Find("EventSystem").GetComponent<PauseMenu>().Pause();
+            GameObject.Find("PlayButton").SetActive(false);
+        }
         for (var i = 0; i < Input.touchCount; i++) {
             if (Input.GetTouch(i).phase == TouchPhase.Began) {
                 Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
@@ -143,12 +149,6 @@ public class StoryManager : MonoBehaviour {
                     }
                 }
             }
-        }
-        if (currentStep == steps.Length && !audioSource.isPlaying && finished == false) {
-            finished = true;
-            //PlayAudio(outroAudio);
-            GameObject.Find("EventSystem").GetComponent<PauseMenu>().Pause();
-            GameObject.Find("PlayButton").SetActive(false);
         }
     }
 

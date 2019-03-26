@@ -58,15 +58,21 @@ public class Water : MonoBehaviour
     }
     IEnumerator AdjustWater(float time,int step) {
         float elapsedTime = 0;
-        while (elapsedTime > time && elapsedTime < 1) {
-            if (step == 8) {
-                water.transform.position = new Vector3(-0.251f,0.487f,0.129f);
-                water.transform.localScale = new Vector3(16.40755f,16.40755f,31f);
-            } else if (step == 10) {
-                water.transform.position = new Vector3(-0.251f,0.355f,0.129f);
-                water.transform.localScale = new Vector3(16.40755f,16.40756f,57.42658f);
+        while(elapsedTime < 1) {
+            elapsedTime += Time.deltaTime;
+            while (elapsedTime > time) {
+                if (step == 8) {
+                    water.transform.position = new Vector3(-0.251f,0.487f,0.129f);
+                    water.transform.localScale = new Vector3(16.40755f,16.40755f,31f);
+                    StopCoroutine("AdjustWater");
+                } else if (step == 10) {
+                    water.transform.position = new Vector3(-0.251f,0.355f,0.129f);
+                    water.transform.localScale = new Vector3(16.40755f,16.40756f,57.42658f);
+                    StopCoroutine("AdjustWater");
+                }
+                yield return null;
             }
             yield return null;
-        }
+        } 
     }
 }
