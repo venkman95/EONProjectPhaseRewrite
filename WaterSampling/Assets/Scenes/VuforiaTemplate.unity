@@ -5214,6 +5214,7 @@ MonoBehaviour:
     manipulationType: 1
     manipulationAxis: 0
     manipulationMultiplier: 10
+<<<<<<< HEAD
 
     hasQuestion: 0
     hasQuestion: 1
@@ -5239,6 +5240,9 @@ MonoBehaviour:
     manipulationAxis: 0
     manipulationMultiplier: 10
     hasQuestion: 1
+=======
+    hasQuestion: 0
+>>>>>>> upstream/master
     question: Past tense of yeet
     choices:
     - yeet
@@ -5250,6 +5254,7 @@ MonoBehaviour:
     audioClip: {fileID: 0}
     missTap: {fileID: 0}
     animClip: {fileID: 0}
+<<<<<<< HEAD
     stepOrder: 2
     highlightThis: {fileID: 0}
     highlightTarget: {fileID: 0}
@@ -5278,6 +5283,9 @@ MonoBehaviour:
 
     stepOrder: 3
 
+=======
+    stepOrder: 0
+>>>>>>> upstream/master
     highlightThis: {fileID: 0}
     highlightTarget: {fileID: 0}
     tapOrDrag: 0
