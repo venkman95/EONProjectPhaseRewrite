@@ -1,30 +1,30 @@
 fileFormatVersion: 2
-guid: f16b569d9975ccf4cb8341c56acfe80e
+guid: e83f66c9a9ad2804e8cd7d6224076f52
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: Airator
-    100002: Cold_Knob
+    100002: ColdKnob
     100004: Faucet
     100006: Sink_Well
     100008: //RootNode
     400000: Airator
-    400002: Cold_Knob
+    400002: ColdKnob
     400004: Faucet
     400006: Sink_Well
     400008: //RootNode
     2100000: No Name
     2300000: Airator
-    2300002: Cold_Knob
+    2300002: ColdKnob
     2300004: Faucet
     2300006: Sink_Well
     3300000: Airator
-    3300002: Cold_Knob
+    3300002: ColdKnob
     3300004: Faucet
     3300006: Sink_Well
     4300000: Sink_Well
     4300002: Faucet
-    4300004: Cold_Knob
+    4300004: ColdKnob
     4300006: Airator
     7400000: Take 001
     9500000: //RootNode
