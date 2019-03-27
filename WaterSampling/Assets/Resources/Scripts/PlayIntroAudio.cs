@@ -6,7 +6,7 @@ using Vuforia;
 public class PlayIntroAudio : MonoBehaviour, ITrackableEventHandler
 {
     private TrackableBehaviour mTrackableBehaviour;
-    public StoryManager story;
+    public StoryManager eventSystem;
     void Start()
     {
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
@@ -25,7 +25,7 @@ public class PlayIntroAudio : MonoBehaviour, ITrackableEventHandler
             newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
         {
             // Play audio when target is found
-            story.PlayIntro();
+            eventSystem.PlayIntro();
         }
         
     }

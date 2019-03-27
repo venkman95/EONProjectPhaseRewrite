@@ -490,7 +490,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511655153}
-  m_Mesh: {fileID: 4300004, guid: e6ac8cd1ede37214ca660c798a64760f, type: 3}
+  m_Mesh: {fileID: 4300004, guid: 27b2cd4c8ef947a47b0f7bd77bc409ab, type: 3}
 --- !u!33 &508354805
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -498,7 +498,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511655155}
-  m_Mesh: {fileID: 4300002, guid: e6ac8cd1ede37214ca660c798a64760f, type: 3}
+  m_Mesh: {fileID: 4300002, guid: 27b2cd4c8ef947a47b0f7bd77bc409ab, type: 3}
 --- !u!33 &508354807
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -506,7 +506,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511655159}
-  m_Mesh: {fileID: 4300000, guid: e6ac8cd1ede37214ca660c798a64760f, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 27b2cd4c8ef947a47b0f7bd77bc409ab, type: 3}
 --- !u!23 &509452851
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -524,7 +524,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100004, guid: e6ac8cd1ede37214ca660c798a64760f, type: 3}
+  - {fileID: 2100004, guid: 27b2cd4c8ef947a47b0f7bd77bc409ab, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -561,7 +561,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 026479b4109ccd2419763e403b61cdc2, type: 2}
+  - {fileID: 2100000, guid: 5c4565a7e1b9add4e8985683a4873578, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -846,7 +846,7 @@ Animator:
   m_GameObject: {fileID: 511655157}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: e6ac8cd1ede37214ca660c798a64760f, type: 3}
-  m_Controller: {fileID: 9100000, guid: a437d6bd17036bd4a874adbe9bdd2767, type: 2}
+  m_Controller: {fileID: 9100000, guid: dbaf1ae80f7cab740986862a683a5fef, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1094,13 +1094,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &913580048
+--- !u!21 &1144261191
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'Object_Tracker001Material
+
+    123956'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 8c0d36e2a95d44babc5bb440b0dbd7a1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
+--- !u!43 &1234850903
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ImageTargetMesh92538
+  m_Name: ImageTargetMesh112046
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -2572,6 +2600,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1652861630}
   - component: {fileID: 1915748082}
+  - component: {fileID: 1652766368}
   m_Layer: 0
   m_Name: bleach bottle_Final
   m_TagString: Untagged
@@ -2592,6 +2621,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.90858, y: 4.834009, z: 21.406578}
   m_Center: {x: 0.0000018430585, y: -0.0000011717256, z: 10.703289}
+--- !u!65 &1652766368
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652766366}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.15, y: 0.4, z: 0.15}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!4 &1652861610
 Transform:
   m_ObjectHideFlags: 0
@@ -3220,6 +3262,7 @@ GameObject:
   - component: {fileID: 1860176665}
   - component: {fileID: 1860176664}
   - component: {fileID: 1860176663}
+  - component: {fileID: 1860176669}
   m_Layer: 0
   m_Name: ImageTarget
   m_TagString: Untagged
@@ -3234,7 +3277,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1860176662}
-  m_Mesh: {fileID: 913580048}
+  m_Mesh: {fileID: 1234850903}
 --- !u!23 &1860176664
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3252,7 +3295,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1926595450}
+  - {fileID: 1144261191}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3335,6 +3378,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1860176669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860176662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0313c09f8d4ffde4fab8fd0ee79967a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 2119829935}
 --- !u!1001 &1861785084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3452,7 +3508,7 @@ Animator:
   m_GameObject: {fileID: 1652766366}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d209114798a24af48b384bd61e5dda9f, type: 2}
+  m_Controller: {fileID: 9100000, guid: de0ab00736b8702459cf0f353e406dcf, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3461,34 +3517,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!21 &1926595450
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Object_Tracker001Material
-
-    92548'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 8c0d36e2a95d44babc5bb440b0dbd7a1, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &1935470153
 GameObject:
   m_ObjectHideFlags: 0
@@ -3677,8 +3705,11 @@ MonoBehaviour:
   steps:
   - objectTarget: {fileID: 1436144833}
     audioClip: {fileID: 8300000, guid: e5ba91869768d9e4fa3135f71b8aa8c7, type: 3}
+    missTap: {fileID: 0}
     animClip: {fileID: 7400000, guid: a97a7f6eb3ab07042980e3f0aa2cd302, type: 2}
     stepOrder: 0
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3686,10 +3717,17 @@ MonoBehaviour:
     manipulationType: 0
     manipulationAxis: 0
     manipulationMultiplier: 0
-  - objectTarget: {fileID: 1652766364}
+    hasQuestion: 0
+    question: 
+    choices: []
+    correctChoice: 0
+  - objectTarget: {fileID: 1652766366}
     audioClip: {fileID: 8300000, guid: de3d8b0ac2208eb4cb2460234c2b883c, type: 3}
-    animClip: {fileID: 7400000, guid: e2fff93055e8fc746ab5af2596387ee9, type: 2}
+    missTap: {fileID: 0}
+    animClip: {fileID: 7400000, guid: 4b36eba7399e2ff4aab8dcc4fe384fb8, type: 2}
     stepOrder: 1
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3697,10 +3735,17 @@ MonoBehaviour:
     manipulationType: 0
     manipulationAxis: 0
     manipulationMultiplier: 0
+    hasQuestion: 0
+    question: 
+    choices: []
+    correctChoice: 0
   - objectTarget: {fileID: 1436144837}
     audioClip: {fileID: 8300000, guid: 2d3bb059a06a8624c8754cd187282da4, type: 3}
-    animClip: {fileID: 7400000, guid: 34b17b7a7a15f9d498328f1522b7acdd, type: 2}
+    missTap: {fileID: 0}
+    animClip: {fileID: 7400000, guid: 97e0be5613c7044488d53c5b46ff78e2, type: 2}
     stepOrder: 2
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3708,10 +3753,17 @@ MonoBehaviour:
     manipulationType: 0
     manipulationAxis: 0
     manipulationMultiplier: 0
+    hasQuestion: 0
+    question: 
+    choices: []
+    correctChoice: 0
   - objectTarget: {fileID: 1436144837}
     audioClip: {fileID: 8300000, guid: 1ea10d457c87b5b4a9a01920ea3c24e6, type: 3}
-    animClip: {fileID: 7400000, guid: 69c066afce4e29942a517b0abac95a2b, type: 2}
+    missTap: {fileID: 0}
+    animClip: {fileID: 7400000, guid: dbd8a1ae891eb744abfaecb0babf9909, type: 2}
     stepOrder: 3
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3719,10 +3771,17 @@ MonoBehaviour:
     manipulationType: 0
     manipulationAxis: 0
     manipulationMultiplier: 0
+    hasQuestion: 0
+    question: 
+    choices: []
+    correctChoice: 0
   - objectTarget: {fileID: 511655155}
     audioClip: {fileID: 8300000, guid: 9fb64db0c0b3def4f9b7b92752b1be74, type: 3}
+    missTap: {fileID: 0}
     animClip: {fileID: 7400000, guid: 2e82a5265037fdc48a6e0e74881143d5, type: 2}
     stepOrder: 4
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3730,10 +3789,17 @@ MonoBehaviour:
     manipulationType: 0
     manipulationAxis: 0
     manipulationMultiplier: 0
+    hasQuestion: 0
+    question: 
+    choices: []
+    correctChoice: 0
   - objectTarget: {fileID: 511655159}
     audioClip: {fileID: 8300000, guid: df1a8b75d0966e3439b5e914f88f3015, type: 3}
-    animClip: {fileID: 7400000, guid: 4d7f8cd3ace22fe48a630e845c9f51c1, type: 2}
+    missTap: {fileID: 0}
+    animClip: {fileID: 7400000, guid: 50e737c5dd35f7d41b2162be142a32ac, type: 2}
     stepOrder: 5
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3741,10 +3807,17 @@ MonoBehaviour:
     manipulationType: 0
     manipulationAxis: 0
     manipulationMultiplier: 0
+    hasQuestion: 0
+    question: 
+    choices: []
+    correctChoice: 0
   - objectTarget: {fileID: 511655159}
     audioClip: {fileID: 8300000, guid: 8f286f2ed01564e4ea4a5be5c65d2221, type: 3}
+    missTap: {fileID: 0}
     animClip: {fileID: 7400000, guid: 3d1995dfa85b16f4b877b7f8b9ce0690, type: 2}
     stepOrder: 6
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3752,10 +3825,17 @@ MonoBehaviour:
     manipulationType: 0
     manipulationAxis: 0
     manipulationMultiplier: 0
+    hasQuestion: 0
+    question: 
+    choices: []
+    correctChoice: 0
   - objectTarget: {fileID: 511655155}
     audioClip: {fileID: 8300000, guid: 91a46b0dd3a5e7c4fbbbe9e37e097b8d, type: 3}
-    animClip: {fileID: 7400000, guid: 12e333a5b097b074abb48eec73502b2f, type: 2}
+    missTap: {fileID: 0}
+    animClip: {fileID: 7400000, guid: 9eecc4bd24f84804f868f243a8f4edaa, type: 2}
     stepOrder: 7
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3763,10 +3843,17 @@ MonoBehaviour:
     manipulationType: 0
     manipulationAxis: 0
     manipulationMultiplier: 0
+    hasQuestion: 0
+    question: 
+    choices: []
+    correctChoice: 0
   - objectTarget: {fileID: 1436144837}
     audioClip: {fileID: 8300000, guid: 9e64341efe528c24cb4ef312a09af78e, type: 3}
-    animClip: {fileID: 7400000, guid: 56fe50d693e6379469e035b5c2b49a3e, type: 2}
+    missTap: {fileID: 0}
+    animClip: {fileID: 7400000, guid: 012723d08093e1e418c26ed039b02f0a, type: 2}
     stepOrder: 8
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3774,10 +3861,17 @@ MonoBehaviour:
     manipulationType: 0
     manipulationAxis: 0
     manipulationMultiplier: 0
+    hasQuestion: 0
+    question: 
+    choices: []
+    correctChoice: 0
   - objectTarget: {fileID: 1436144833}
     audioClip: {fileID: 8300000, guid: 1df7e01521aed48439f10a6561e4db35, type: 3}
-    animClip: {fileID: 7400000, guid: 03ee40514dcb3d849ad7146b391a6387, type: 2}
+    missTap: {fileID: 0}
+    animClip: {fileID: 7400000, guid: 99b46f27f1ad1b246a3d2ee2affd858f, type: 2}
     stepOrder: 9
+    highlightThis: {fileID: 0}
+    highlightTarget: {fileID: 0}
     tapOrDrag: 0
     hasSlider: 0
     sliderTarget: 0
@@ -3785,6 +3879,10 @@ MonoBehaviour:
     manipulationType: 0
     manipulationAxis: 0
     manipulationMultiplier: 0
+    hasQuestion: 0
+    question: 
+    choices: []
+    correctChoice: 0
 --- !u!82 &2119829936
 AudioSource:
   m_ObjectHideFlags: 0
